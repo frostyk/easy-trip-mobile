@@ -11,10 +11,10 @@ const fetchCountriesRequest = () => {
     }
 };
 
-const fetchCountriesSuccess = (res) => {
+const fetchCountriesSuccess = (payload) => {
     return {
         type: FETCH_COUNTRIES_SUCCESS,
-        payload: res
+        payload
     }
 };
 
@@ -27,16 +27,23 @@ const fetchCountriesFailure = (err) => {
 
 const fetch = (name) => {
    return axios.get(`${FETCH_COUNTRIES_URL}${name}`);
-} ;
+};
 
 export const fetchCountries = (name) => {
+    console.log(name);
     return (dispatch) => {
         dispatch(fetchCountriesRequest());
-        fetch(name)
-            .then(res => {
-                dispatch(fetchCountriesSuccess(res));
-            })
-            .catch(err => dispatch(fetchCountriesFailure(err)))
+        if (name.length < 3) {
+            dispatch(fetchCountriesSuccess([]));
+        } else {
+            fetch(name)
+                .then(res => {
+                    dispatch(fetchCountriesSuccess(res.data));
+                })
+                .catch(err => {
+                    dispatch(fetchCountriesFailure(err))
+                })
+        }
     }
 };
 

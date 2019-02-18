@@ -1,54 +1,40 @@
 import React from 'react';
-import {Platform, ScrollView, StyleSheet, View, SafeAreaView} from 'react-native';
-import {PricingCard, SearchBar} from 'react-native-elements';
+import {Platform, SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
+import {PricingCard} from 'react-native-elements';
+import Autocomplete from "../components/Autocomplete";
 
-export default class HomeScreen extends React.Component {
+
+class HomeScreen extends React.Component {
     static navigationOptions = {
         header: null,
-    };
-
-    constructor (props) {
-        super(props);
-        this.state = {
-            search: ''
-        }
-    }
-
-    updateSearch = search => {
-        console.log(search);
-        this.setState({search: search})
     };
 
     render() {
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
                 <View style={styles.container}>
+                    <Autocomplete/>
                     <ScrollView>
-                        <SearchBar
-                            lightTheme={true}
-                            placeholder="Type Here..."
-                            onChangeText={this.updateSearch}
-                            value={this.state.search}
-                        />
-
-                        <PricingCard
-                            color="#4f9deb"
-                            title="Get a personalized plan"
-                            info={['A complete day-by-day itinerary based on your preferences']}
-                            button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
-                        />
-                        <PricingCard
-                            color="#4f9deb"
-                            title="Customize it"
-                            info={['Refine your plan. We\'ll find the best routes']}
-                            button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
-                        />
-                        <PricingCard
-                            color="#4f9deb"
-                            title="Manage it"
-                            info={['Everything in one place.Everyone on the same page']}
-                            button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
-                        />
+                        <View style={styles.contentContainer}>
+                            <PricingCard
+                                color="#4f9deb"
+                                title="Get a personalized plan"
+                                info={['A complete day-by-day itinerary based on your preferences']}
+                                button={{title: 'GET STARTED', icon: 'flight-takeoff'}}
+                            />
+                            <PricingCard
+                                color="#4f9deb"
+                                title="Customize it"
+                                info={['Refine your plan. We\'ll find the best routes']}
+                                button={{title: 'GET STARTED', icon: 'flight-takeoff'}}
+                            />
+                            <PricingCard
+                                color="#4f9deb"
+                                title="Manage it"
+                                info={['Everything in one place.Everyone on the same page']}
+                                button={{title: 'GET STARTED', icon: 'flight-takeoff'}}
+                            />
+                        </View>
                     </ScrollView>
                 </View>
             </SafeAreaView>
@@ -59,10 +45,10 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#fff'
     },
     contentContainer: {
-        paddingTop: 30,
+        paddingTop: 50,
     },
     tabBarInfoContainer: {
         position: 'absolute',
@@ -85,3 +71,5 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
     },
 });
+
+export default HomeScreen;
