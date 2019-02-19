@@ -1,6 +1,6 @@
 import React from 'react';
 import {Divider, ListItem, SearchBar} from "react-native-elements";
-import {Platform, StyleSheet, View} from "react-native";
+import {Platform, StyleSheet, View, ScrollView} from "react-native";
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
@@ -9,7 +9,7 @@ class Autocomplete extends React.Component {
 
     updateSearch = search => {
         this.props.changeHomeScreenState({search});
-        this.props.fetchCountries(search);
+        this.props.fetchPlaces(search);
     };
 
     render() {
@@ -21,18 +21,18 @@ class Autocomplete extends React.Component {
                     onChangeText={this.updateSearch}
                     value={this.props.state.search}
                 />
-                <View >
+                <ScrollView >
                     {
-                        this.props.countries.map((item, i) => (
+                        this.props.places.map((item, i) => (
                             <ListItem
                                 key={i}
-                                title={item.name}
+                                title={item.description}
                                 // leftIcon={{ name: item.icon }}
                             />
                         ))
                     }
                     <Divider />
-                </View>
+                </ScrollView>
             </View>
         );
     }
@@ -55,7 +55,7 @@ const mapStateToProps = (state, ownProps) => {
     console.log(state);
     return {
         state: state.homeScreenState,
-        countries: state.countries.countries
+        places: state.places.places
     };
 };
 
