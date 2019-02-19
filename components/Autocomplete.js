@@ -12,6 +12,11 @@ class Autocomplete extends React.Component {
         this.props.fetchPlaces(search);
     };
 
+    onItemPress = item => {
+        this.props.cleanPlaces();
+        this.props.geocodeAddressByPlaceIdAndFindPlaces(item.place_id, 'restaurant', 1500);
+    };
+
     render() {
         return (
             <View style={styles.container}>
@@ -27,7 +32,7 @@ class Autocomplete extends React.Component {
                             <ListItem
                                 key={i}
                                 title={item.description}
-                                // leftIcon={{ name: item.icon }}
+                                onPress={(e) => this.onItemPress(item)}
                             />
                         ))
                     }
@@ -52,10 +57,12 @@ const styles = StyleSheet.create({
 
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state);
+    console.log(state.establishments.establishments);
     return {
         state: state.homeScreenState,
-        places: state.places.places
+        places: state.places.places,
+        establishments: state.establishments.establishments,
+        geocode: state.geocode.results,
     };
 };
 

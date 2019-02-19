@@ -1,3 +1,5 @@
 export * from './FetchCountriesAction'
 export * from './HomeScreenAction'
 export * from './FetchPlacesAction'
+export * from './FetchEstablishmentsAction'
+export * from './GeocodeAddressAction'

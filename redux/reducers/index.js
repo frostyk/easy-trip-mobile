@@ -2,9 +2,13 @@ import {combineReducers} from "redux";
 import {fetchCountriesReducer} from "./FetchCountriesReducer";
 import {fetchPlacesReducer} from "./FetchPlacesReducer";
 import {changeHomeScreenReducer} from "./ChangeHomeScreenStateReducer";
+import {geocodeAddressReducer} from "./GeocodeAddressReducer";
+import {fetchEstablishmentsReducer} from "./FetchEstablishmentsReducer";
 
 export default combineReducers({
     countries: fetchCountriesReducer,
     places: fetchPlacesReducer,
-    homeScreenState: changeHomeScreenReducer
+    homeScreenState: changeHomeScreenReducer,
+    geocode: geocodeAddressReducer,
+    establishments: fetchEstablishmentsReducer
 });

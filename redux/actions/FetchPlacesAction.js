@@ -26,6 +26,7 @@ const fetch = (name) => {
    return axios.get(`https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${name}&types=(regions)&key=AIzaSyAmI4piO1wcjs4XWSNQW8W8srY7hDfKIKc`);
 };
 
+
 export const fetchPlaces = (name) => {
     return (dispatch) => {
         dispatch(fetchPlacesRequest());
@@ -43,4 +44,9 @@ export const fetchPlaces = (name) => {
     }
 };
 
+export const cleanPlaces = () => {
+    return (dispatch) => {
+        dispatch(fetchPlacesSuccess([]));
+    }
+};
 
