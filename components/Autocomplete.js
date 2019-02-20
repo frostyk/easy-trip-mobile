@@ -4,8 +4,10 @@ import {Platform, StyleSheet, View, ScrollView} from "react-native";
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
+import {CAFE, MUSEUM, NIGHT_CLUB, PARK, RESTAURANT, ZOO} from "../constants/Google";
 
 class Autocomplete extends React.Component {
+
 
     updateSearch = search => {
         this.props.changeHomeScreenState({search});
@@ -13,8 +15,11 @@ class Autocomplete extends React.Component {
     };
 
     onItemPress = item => {
+        const establishmentsTypes = [RESTAURANT, MUSEUM, PARK, ZOO, NIGHT_CLUB, CAFE];
         this.props.cleanPlaces();
-        this.props.geocodeAddressByPlaceIdAndFindPlaces(item.place_id, 'restaurant', 1500);
+        establishmentsTypes.forEach(type => {
+            this.props.geocodeAddressByPlaceIdAndFindPlaces(item.place_id, type, 1500);
+        });
     };
 
     render() {
@@ -57,7 +62,6 @@ const styles = StyleSheet.create({
 
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state.establishments.establishments);
     return {
         state: state.homeScreenState,
         places: state.places.places,

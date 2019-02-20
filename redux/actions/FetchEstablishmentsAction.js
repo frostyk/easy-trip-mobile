@@ -1,6 +1,7 @@
 import {FETCH_ESTABLISHMENTS_FAILURE, FETCH_ESTABLISHMENTS_REQUEST, FETCH_ESTABLISHMENTS_SUCCESS} from "./types/types";
 import axios from "axios";
 import {GOOGLE_API_KEY} from "../../constants/Google";
+import {addEstablishments} from "./ManageEstablishmentsAction";
 
 
 const fetchEstablishmentsRequest = () => {
@@ -33,23 +34,16 @@ const fetch = (request) => {
 
 export const fetchEstablishmentsNearby = (location, placeType, radius) => {
     let requestObject = createRequestObject(location, placeType, radius);
-    console.log(requestObject);
     return (dispatch) => {
         dispatch(fetchEstablishmentsRequest());
         fetch(requestObject)
             .then(res => {
-                console.log(res.data);
                 dispatch(fetchEstablishmentsSuccess(res.data.results));
+                dispatch(addEstablishments(res.data.results, placeType));
             })
             .catch(err => {
                 dispatch(fetchEstablishmentsFailure(err))
             })
-    }
-};
-
-export const cleanEstablishments = () => {
-    return (dispatch) => {
-        dispatch(fetchEstablishmentsSuccess([]));
     }
 };
 

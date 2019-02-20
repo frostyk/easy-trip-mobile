@@ -1,7 +1,11 @@
 import React from 'react';
 import {Platform, SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
-import {PricingCard} from 'react-native-elements';
+import {ListItem} from 'react-native-elements';
 import Autocomplete from "../components/Autocomplete";
+import {connect} from "react-redux";
+import * as actions from "../redux/actions";
+import {GOOGLE_API_KEY} from "../constants/Google";
+import axios from "axios"
 
 
 class HomeScreen extends React.Component {
@@ -9,31 +13,103 @@ class HomeScreen extends React.Component {
         header: null,
     };
 
+    downloadImage = (item) => {
+        console.log(item.photos[0].html_attributions[0].photo_reference);
+        axios.get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`,
+            {
+                headers: {
+                    'Content-Type': 'image/jpeg'
+                }
+            })
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
+        return item.icon;
+    };
+
+    renderRestaurants = (establishments) => {
+        return (
+            <View>
+                <ListItem
+                    key={0}
+                    title={'Restaurants'}
+                    badge={{value: establishments.restaurants.length}}
+                    chevron={true}
+                    leftIcon={{name: 'restaurant'}}
+                />
+               {/* {
+                    establishments.restaurants.map((item, index) => (
+                        <ListItem
+                            key={index}
+                            title={item.name}
+                            chevron={true}
+                            leftAvatar={{source: {uri: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`}}}
+                        />
+                    ))
+                }*/}
+            </View>
+        )
+    };
+    renderCafes = (establishments) => {
+        return (
+            <View>
+                <ListItem
+                    key={1}
+                    title={'Cafes'}
+                    badge={{value: establishments.cafes.length}}
+                    chevron={true}
+                    leftIcon={{name: 'local-cafe'}}
+                />
+            </View>
+        )
+    };
+    renderParks = (establishments) => {
+        return (
+            <ListItem
+                key={2}
+                title={'Parks'}
+                badge={{value: establishments.parks.length}}
+                chevron={true}
+                leftIcon={{name: 'local-parking'}}
+
+            />
+        )
+    };
+    renderZoos = (establishments) => {
+        return (
+            <ListItem
+                key={3}
+                title={'Zoos'}
+                badge={{value: establishments.zoos.length}}
+                chevron={true}
+                leftIcon={{name: 'pets'}}
+            />
+        )
+    };
+    renderMuseums = (establishments) => {
+        return (
+            <ListItem
+                key={4}
+                title={'Museums'}
+                badge={{value: establishments.museums.length}}
+                chevron={true}
+                leftIcon={{name: 'report-problem'}}
+            />
+        )
+    };
+
     render() {
+        const {establishments} = this.props;
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
                 <View style={styles.container}>
                     <Autocomplete/>
                     <ScrollView>
                         <View style={styles.contentContainer}>
-                            <PricingCard
-                                color="#4f9deb"
-                                title="Get a personalized plan"
-                                info={['A complete day-by-day itinerary based on your preferences']}
-                                button={{title: 'GET STARTED', icon: 'flight-takeoff'}}
-                            />
-                            <PricingCard
-                                color="#4f9deb"
-                                title="Customize it"
-                                info={['Refine your plan. We\'ll find the best routes']}
-                                button={{title: 'GET STARTED', icon: 'flight-takeoff'}}
-                            />
-                            <PricingCard
-                                color="#4f9deb"
-                                title="Manage it"
-                                info={['Everything in one place.Everyone on the same page']}
-                                button={{title: 'GET STARTED', icon: 'flight-takeoff'}}
-                            />
+                            {this.renderRestaurants(establishments)}
+                            {this.renderCafes(establishments)}
+                            {this.renderParks(establishments)}
+                            {this.renderZoos(establishments)}
+                            {this.renderMuseums(establishments)}
                         </View>
                     </ScrollView>
                 </View>
@@ -72,4 +148,11 @@ const styles = StyleSheet.create({
     },
 });
 
-export default HomeScreen;
+const mapStateToProps = (state, ownProps) => {
+    console.log(state.establishmentsStore);
+    return {
+        establishments: state.establishmentsStore
+    };
+};
+
+export default connect(mapStateToProps, actions)(HomeScreen)
