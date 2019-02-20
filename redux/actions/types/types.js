@@ -28,5 +28,8 @@ export const CLEAN_ESTABLISHMENTS = 'CLEAN_ESTABLISHMENTS';
 //Change Home Screen state
 export const CHANGE_HOME_SCREEN_STATE = 'CHANGE_HOME_SCREEN_STATE';
 
+//Change Establishment Screen state
+export const CHANGE_ESTABLISHMENT_SCREEN_STATE = 'CHANGE_ESTABLISHMENT_SCREEN_STATE';
+
 
 

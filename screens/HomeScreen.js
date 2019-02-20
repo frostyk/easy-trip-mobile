@@ -4,8 +4,6 @@ import {ListItem} from 'react-native-elements';
 import Autocomplete from "../components/Autocomplete";
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
-import {GOOGLE_API_KEY} from "../constants/Google";
-import axios from "axios"
 
 
 class HomeScreen extends React.Component {
@@ -13,91 +11,47 @@ class HomeScreen extends React.Component {
         header: null,
     };
 
-    downloadImage = (item) => {
-        console.log(item.photos[0].html_attributions[0].photo_reference);
-        axios.get(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`,
-            {
-                headers: {
-                    'Content-Type': 'image/jpeg'
-                }
-            })
-            .then(res => console.log(res))
-            .catch(err => console.log(err));
-        return item.icon;
+    navigateToAndSetTitle = (routeConfig) => {
+        const {route, title, establishments} = routeConfig;
+        this.props.navigation.setParams({title});
+        this.props.navigation.navigate(route);
+        this.props.changeEstablishmentScreenState({establishments})
+    };
+
+    renderEstablishmentListItem = (key, title, badgeValue, iconName, routeConfig) => {
+        return (
+            <ListItem
+                key={key}
+                title={title}
+                badge={{value: badgeValue}}
+                chevron={true}
+                leftIcon={{name: iconName}}
+                onPress={() => this.navigateToAndSetTitle(routeConfig)}
+            />
+        );
     };
 
     renderRestaurants = (establishments) => {
-        return (
-            <View>
-                <ListItem
-                    key={0}
-                    title={'Restaurants'}
-                    badge={{value: establishments.restaurants.length}}
-                    chevron={true}
-                    leftIcon={{name: 'restaurant'}}
-                />
-               {/* {
-                    establishments.restaurants.map((item, index) => (
-                        <ListItem
-                            key={index}
-                            title={item.name}
-                            chevron={true}
-                            leftAvatar={{source: {uri: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`}}}
-                        />
-                    ))
-                }*/}
-            </View>
-        )
+        return this.renderEstablishmentListItem(0, 'Restaurants', establishments.restaurants.length, 'restaurant', {route: 'Establishments', title: 'Restaurants', establishments: this.props.establishments.restaurants})
     };
     renderCafes = (establishments) => {
-        return (
-            <View>
-                <ListItem
-                    key={1}
-                    title={'Cafes'}
-                    badge={{value: establishments.cafes.length}}
-                    chevron={true}
-                    leftIcon={{name: 'local-cafe'}}
-                />
-            </View>
-        )
+        return this.renderEstablishmentListItem(1, 'Cafes', establishments.cafes.length, 'local-cafe', {route: 'Establishments', title: 'Cafes', establishments: this.props.establishments.cafes})
     };
-    renderParks = (establishments) => {
-        return (
-            <ListItem
-                key={2}
-                title={'Parks'}
-                badge={{value: establishments.parks.length}}
-                chevron={true}
-                leftIcon={{name: 'local-parking'}}
 
-            />
-        )
+    renderParks = (establishments) => {
+        return this.renderEstablishmentListItem(2, 'Parks', establishments.parks.length, 'local-parking', {route: 'Establishments', title: 'Parks', establishments: this.props.establishments.parks})
     };
+
     renderZoos = (establishments) => {
-        return (
-            <ListItem
-                key={3}
-                title={'Zoos'}
-                badge={{value: establishments.zoos.length}}
-                chevron={true}
-                leftIcon={{name: 'pets'}}
-            />
-        )
+        return this.renderEstablishmentListItem(3, 'Zoos', establishments.zoos.length, 'pets', {route: 'Establishments', title: 'Zoos',  establishments: this.props.establishments.zoos})
     };
+
     renderMuseums = (establishments) => {
-        return (
-            <ListItem
-                key={4}
-                title={'Museums'}
-                badge={{value: establishments.museums.length}}
-                chevron={true}
-                leftIcon={{name: 'report-problem'}}
-            />
-        )
+        return this.renderEstablishmentListItem(4, 'Museums', establishments.museums.length, 'pets', {route: 'Establishments', title: 'Museums', establishments: this.props.establishments.museums})
     };
 
     render() {
+        console.log(this.props);
         const {establishments} = this.props;
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
@@ -149,7 +103,6 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state.establishmentsStore);
     return {
         establishments: state.establishmentsStore
     };
