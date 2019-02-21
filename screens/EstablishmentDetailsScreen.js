@@ -2,7 +2,7 @@ import React from 'react';
 import {ActivityIndicator, ScrollView, StyleSheet, View} from 'react-native';
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
-import {AirbnbRating, ButtonGroup, Card, Image} from "react-native-elements";
+import {AirbnbRating, ButtonGroup, Card, Image, ListItem} from "react-native-elements";
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
 import {GOOGLE_API_KEY} from "../constants/Google";
 import {changeEstablishmentDetailsScreenState} from "../redux/actions";
@@ -39,6 +39,21 @@ class EstablishmentDetailsScreen extends React.Component {
                 <Card title="Raiting">
                     <AirbnbRating readonly={true} defaultRating={Math.round(establishment.rating)}/>
                 </Card>
+                <Card title="Reviews">
+                    {
+                        establishment.reviews.map((u, i) => {
+                            return (
+                                <ListItem
+                                    key={i}
+                                    leftAvatar={{ source: { uri: u.profile_photo_url } }}
+                                    title={u.author_name}
+                                    subtitle={u.text}
+
+                                />
+                            );
+                        })
+                    }
+                </Card>
             </View>
         )
     };
@@ -48,7 +63,6 @@ class EstablishmentDetailsScreen extends React.Component {
             return null;
         }
         const {establishment} = this.props.state;
-        console.log(establishment);
         return (
             <ScrollView>
                 <Image
