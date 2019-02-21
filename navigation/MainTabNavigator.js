@@ -7,9 +7,11 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import EstablishmentsScreen from "../screens/EstablishmentsScreen";
+import EstablishmentDetailsScreen from '../screens/EstablishmentDetailsScreen'
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
+  EstablishmentDetails: EstablishmentDetailsScreen,
   Establishments: EstablishmentsScreen
 });
 

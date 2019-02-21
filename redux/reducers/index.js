@@ -6,6 +6,8 @@ import {geocodeAddressReducer} from "./GeocodeAddressReducer";
 import {fetchEstablishmentsReducer} from "./FetchEstablishmentsReducer";
 import {manageEstablishmentsReducer} from "./ManageEstablishmentsStateReducer";
 import {changeEstablishmentScreenReducer} from "./ChangeEstablishmentScreenStateReducer";
+import {changeEstablishmentDetailsScreenReducer} from "./ChangeEstablishmentDetailsScreenStateReducer";
+import {fetchEstablishmentDetailsReducer} from "./FetchEstablishmentDetailsReducer";
 
 export default combineReducers({
     countries: fetchCountriesReducer,
@@ -14,5 +16,7 @@ export default combineReducers({
     geocode: geocodeAddressReducer,
     establishments: fetchEstablishmentsReducer,
     establishmentsStore: manageEstablishmentsReducer,
-    establishmentScreenState: changeEstablishmentScreenReducer
+    establishmentScreenState: changeEstablishmentScreenReducer,
+    establishmentDetailsScreenState: changeEstablishmentDetailsScreenReducer,
+    establishmentDetails: fetchEstablishmentDetailsReducer
 });
