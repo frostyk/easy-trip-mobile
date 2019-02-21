@@ -5,7 +5,7 @@ import * as actions from "../redux/actions";
 import {AirbnbRating, ButtonGroup, Card, Image, ListItem} from "react-native-elements";
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
 import {GOOGLE_API_KEY} from "../constants/Google";
-import {changeEstablishmentDetailsScreenState} from "../redux/actions";
+import {MapView} from 'expo';
 
 class EstablishmentDetailsScreen extends React.Component {
     static navigationOptions = ({navigation}) => {
@@ -45,7 +45,7 @@ class EstablishmentDetailsScreen extends React.Component {
                             return (
                                 <ListItem
                                     key={i}
-                                    leftAvatar={{ source: { uri: u.profile_photo_url } }}
+                                    leftAvatar={{source: {uri: u.profile_photo_url}}}
                                     title={u.author_name}
                                     subtitle={u.text}
 
@@ -54,6 +54,29 @@ class EstablishmentDetailsScreen extends React.Component {
                         })
                     }
                 </Card>
+            </View>
+        )
+    };
+
+    renderMap = (establishment) => {
+        return (
+            <View>
+                <MapView
+                    style={{width: widthPercentageToDP('100%'), height: heightPercentageToDP('50%')}}
+                    initialRegion={{
+                        latitude: establishment.geometry.location.lat,
+                        longitude: establishment.geometry.location.lng,
+                        latitudeDelta: 0.0922,
+                        longitudeDelta: 0.0421,
+                    }}>
+                    <MapView.Marker
+                        coordinate={{
+                            latitude: establishment.geometry.location.lat,
+                            longitude: establishment.geometry.location.lng,
+                        }}
+                        title={establishment.name}
+                    />
+                </MapView>
             </View>
         )
     };
@@ -71,6 +94,7 @@ class EstablishmentDetailsScreen extends React.Component {
                     PlaceholderContent={<ActivityIndicator/>}
                 />
                 {this.renderButtonsGroup()}
+                {this.props.state.selectedIndex === 1 && this.renderMap(establishment)}
                 {this.props.state.selectedIndex === 2 && this.renderReviews(establishment)}
             </ScrollView>
         );
