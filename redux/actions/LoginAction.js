@@ -31,12 +31,14 @@ export const login = (user) => {
     return (dispatch) => {
         dispatch(loginRequest());
         fetchLogin(user)
-            .then(res => {
+            .then(async res => {
                 if (res.data.id_token) {
-                    dispatch(loginSuccess());
-                    dispatch(onSignIn(res.data.id_token));
-                } else {
-                    dispatch(loginFailure(`Can't fetch id_token`))
+                    try {
+                        await onSignIn(res.data.id_token);
+                        dispatch(loginSuccess());
+                    } catch (e) {
+                        dispatch(loginFailure(e))
+                    }
                 }
             })
             .catch(err => {

@@ -22,7 +22,9 @@ class SettingsScreen extends React.Component {
     }
 
     componentDidUpdate() {
-        this.props.navigation.navigate('AuthLoading');
+        if (this.props.logoutState.isSuccessful) {
+            this.props.navigation.navigate('AuthLoading');
+        }
     }
 
     _logoutAsync = () => {
@@ -32,8 +34,7 @@ class SettingsScreen extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        login: state.loginState,
-        logout: state.logoutState,
+        logoutState: state.logoutState
     };
 };
 

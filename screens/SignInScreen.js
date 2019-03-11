@@ -23,8 +23,10 @@ class SignInScreen extends React.Component {
         );
     }
 
-    componentWillReceiveProps(nextProps, nextContext) {
-        console.log('Component will receive props');
+    componentDidUpdate() {
+        if (this.props.loginState.isSuccessful) {
+            this.props.navigation.navigate('AuthLoading');
+        }
     }
 
     _signInAsync = () => {
@@ -36,8 +38,14 @@ class SignInScreen extends React.Component {
     }
 }
 
+const mapStateToProps = (state, ownProps) => {
+    return {
+        loginState: state.loginState
+    };
+};
 
-export default connect(null, actions)(SignInScreen);
+
+export default connect(mapStateToProps, actions)(SignInScreen);
 
 const styles = StyleSheet.create({
     container: {
