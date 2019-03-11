@@ -1,4 +1,4 @@
-import {LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS} from "./types/types";
+import {LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_RESET} from "./types/types";
 import axios from "axios";
 import {SERVER_URL} from "../../constants/Server";
 import {onSignIn} from "../../auth/auth";
@@ -22,6 +22,12 @@ const loginFailure = (err) => {
         payload: err
     }
 };
+const loginReset = (err) => {
+    return {
+        type: LOGIN_RESET,
+        payload: err
+    }
+};
 
 const fetchLogin = (user) => {
     return axios.post(`${SERVER_URL}/api/authenticate`, user);
@@ -36,6 +42,7 @@ export const login = (user) => {
                     try {
                         await onSignIn(res.data.id_token);
                         dispatch(loginSuccess());
+                        dispatch(loginReset());
                     } catch (e) {
                         dispatch(loginFailure(e))
                     }

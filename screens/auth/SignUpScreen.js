@@ -46,7 +46,7 @@ class SignUpScreen extends React.Component {
 
                             <Button title={'Sign Up'}  titleStyle={Buttons.rounded.title}
                                     onPress={this._onSignInPress}
-                                    buttonStyle={[Buttons.rounded.solidStyle, {width: widthPercentageToDP('50%')}]}/>
+                                    buttonStyle={[Buttons.rounded.solidStyle, {width: widthPercentageToDP('60%')}]}/>
                         </View>
                     </View>
                 </View>

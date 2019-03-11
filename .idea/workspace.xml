@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58b6431e-fc73-4d97-bd26-14c19e5c3cf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/screens/auth/SignUpScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/AuthStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/AuthStack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/LoginAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/LoginAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/types/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/types/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/LoginReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/LoginReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/auth/SignInScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/SignInScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/auth/SignUpScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/SignUpScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,13 +18,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/screens/auth/SignUpScreen.js">
+        <entry file="file://$PROJECT_DIR$/redux/reducers/LoginReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -120,7 +118,6 @@
         <option value="$PROJECT_DIR$/redux/actions/FetchPlacesAction.js" />
         <option value="$PROJECT_DIR$/components/Autocomplete.js" />
         <option value="$PROJECT_DIR$/constants/Server.js" />
-        <option value="$PROJECT_DIR$/redux/actions/types/types.js" />
         <option value="$PROJECT_DIR$/redux/actions/index.js" />
         <option value="$PROJECT_DIR$/auth/auth.js" />
         <option value="$PROJECT_DIR$/redux/actions/LogoutAction.js" />
@@ -128,20 +125,21 @@
         <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
         <option value="$PROJECT_DIR$/screens/AuthLoadingScreen.js" />
         <option value="$PROJECT_DIR$/redux/reducers/index.js" />
-        <option value="$PROJECT_DIR$/redux/reducers/LoginReducer.js" />
         <option value="$PROJECT_DIR$/screens/SettingsScreen.js" />
-        <option value="$PROJECT_DIR$/redux/actions/LoginAction.js" />
         <option value="$PROJECT_DIR$/screens/SignInScreen.js" />
         <option value="$PROJECT_DIR$/navigation/AppNavigator.js" />
         <option value="$PROJECT_DIR$/styles/Buttons.js" />
         <option value="$PROJECT_DIR$/styles/Typography.js" />
         <option value="$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js" />
         <option value="$PROJECT_DIR$/styles/Input.js" />
-        <option value="$PROJECT_DIR$/styles/Inputs.js" />
-        <option value="$PROJECT_DIR$/screens/auth/SignInScreen.js" />
         <option value="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" />
         <option value="$PROJECT_DIR$/navigation/AuthStack.js" />
+        <option value="$PROJECT_DIR$/styles/Inputs.js" />
+        <option value="$PROJECT_DIR$/screens/auth/SignInScreen.js" />
         <option value="$PROJECT_DIR$/screens/auth/SignUpScreen.js" />
+        <option value="$PROJECT_DIR$/redux/actions/LoginAction.js" />
+        <option value="$PROJECT_DIR$/redux/actions/types/types.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/LoginReducer.js" />
       </list>
     </option>
   </component>
@@ -168,7 +166,26 @@
             <path>
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
               <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="navigation" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+              <item name="types" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
@@ -195,7 +212,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552315719631" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552318805389" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/backend/node_modules/typescript/lib" />
   </component>
@@ -241,7 +258,7 @@
       <workItem from="1552296057537" duration="16000" />
       <workItem from="1552296088202" duration="632000" />
       <workItem from="1552297024480" duration="900000" />
-      <workItem from="1552298255856" duration="13359000" />
+      <workItem from="1552298255856" duration="15207000" />
     </task>
     <task id="LOCAL-00001" summary="Added Authentication flow">
       <created>1552303927871</created>
@@ -278,12 +295,12 @@
       <option name="project" value="LOCAL" />
       <updated>1552315280239</updated>
     </task>
-    <task id="LOCAL-00006" summary="Add establishment showing">
-      <created>1550665254736</created>
+    <task id="LOCAL-00006" summary="Added SignUp screen">
+      <created>1552316359175</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1550665254736</updated>
+      <updated>1552316359175</updated>
     </task>
     <task id="LOCAL-00007" summary="Add establishment screen">
       <created>1550671043413</created>
@@ -320,11 +337,11 @@
       <option name="project" value="LOCAL" />
       <updated>1552294646780</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14911000" />
+    <option name="totallyTimeSpent" value="16759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="954" extended-state="0" />
@@ -411,7 +428,8 @@
     <MESSAGE value="Fixed login" />
     <MESSAGE value="Added welcome screen" />
     <MESSAGE value="Added SignIn screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added SignIn screen" />
+    <MESSAGE value="Added SignUp screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added SignUp screen" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/components/Autocomplete.js">
@@ -482,13 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/types/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -581,23 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/LoginAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/reducers/LoginReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
@@ -642,23 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/Inputs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/auth/SignInScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screens/auth/WelcomeScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -689,13 +666,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/auth/SignUpScreen.js">
+    <entry file="file://$PROJECT_DIR$/styles/Inputs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
+        <state relative-caret-position="165">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/auth/SignInScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="47" column="109" selection-start-line="47" selection-start-column="109" selection-end-line="47" selection-end-column="109" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/auth/SignUpScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/LoginAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="45" lean-forward="true" selection-start-column="45" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/types/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/reducers/LoginReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
         </state>
       </provider>
     </entry>

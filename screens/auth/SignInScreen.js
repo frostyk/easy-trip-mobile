@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
-import {Text, Input, Button} from "react-native-elements";
+import {Button, Input, Text} from "react-native-elements";
 
 import {connect} from "react-redux";
 import * as actions from "../../redux/actions";
@@ -14,6 +14,14 @@ class SignInScreen extends React.Component {
         title: '',
     };
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            loginInput: '',
+            passwordInput: ''
+        }
+    }
+
     render() {
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
@@ -25,17 +33,19 @@ class SignInScreen extends React.Component {
                                 inputContainerStyle={Inputs.rounded.inputContainerStyle}
                                 inputStyle={Inputs.rounded.inputStyle}
                                 placeholder='E-mail'
+                                onChangeText={(text) => this.setState({loginInput: text})}
                             />
                             <Input
                                 inputContainerStyle={Inputs.rounded.inputContainerStyle}
                                 inputStyle={Inputs.rounded.inputStyle}
                                 placeholder='Password'
+                                onChangeText={(text) => this.setState({passwordInput: text})}
                                 secureTextEntry={true}
                             />
 
-                            <Button title={'Log In'}  titleStyle={Buttons.rounded.title}
+                            <Button title={'Log In'} titleStyle={Buttons.rounded.title}
                                     onPress={this._onSignInPress}
-                                    buttonStyle={[Buttons.rounded.solidStyle, {width: widthPercentageToDP('50%')}]}/>
+                                    buttonStyle={[Buttons.rounded.solidStyle, {width: widthPercentageToDP('60%')}]}/>
                         </View>
                     </View>
                 </View>
@@ -50,7 +60,11 @@ class SignInScreen extends React.Component {
     }
 
     _onSignInPress = () => {
-        this.props.login({});
+        this.props.login({
+            password: this.state.passwordInput,
+            rememberMe: false,
+            username: this.state.loginInput
+        });
     }
 
 }
