@@ -1,14 +1,11 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 import {Button, Text} from "react-native-elements";
-
-import {connect} from "react-redux";
-import * as actions from "../../redux/actions";
 import Typography from '../../styles/Typography'
 import Buttons from '../../styles/Buttons'
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
 
-class WelcomeScreen extends React.Component {
+export default class WelcomeScreen extends React.Component {
     static navigationOptions = {
         header: null,
     };
@@ -23,7 +20,7 @@ class WelcomeScreen extends React.Component {
                                 onPress={this._onSignInPress}
                                 buttonStyle={[Buttons.rounded.outlineStyle, {width: widthPercentageToDP('75%')}]}/>
                         <Button title={'Sign Up'} titleStyle={Buttons.rounded.title}
-                                buttonStyle={[Buttons.rounded.solidStyle,  {width: widthPercentageToDP('75%')}]}/>
+                                buttonStyle={[Buttons.rounded.solidStyle, {width: widthPercentageToDP('75%')}]}/>
                     </View>
                 </View>
             </SafeAreaView>
@@ -37,18 +34,10 @@ class WelcomeScreen extends React.Component {
     }
 
     _onSignInPress = () => {
-        this.props.navigation.navigate('');
+        this.props.navigation.navigate('SignIn');
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    return {
-        loginState: state.loginState
-    };
-};
-
-
-export default connect(mapStateToProps, actions)(WelcomeScreen);
 
 const styles = StyleSheet.create({
     container: {
