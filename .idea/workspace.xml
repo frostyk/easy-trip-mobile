@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58b6431e-fc73-4d97-bd26-14c19e5c3cf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/screens/auth/SignInScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/Inputs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/auth/SignUpScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation/AuthStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/AuthStack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/auth/SignInScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/SignInScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,10 +17,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/screens/auth/SignInScreen.js">
+        <entry file="file://$PROJECT_DIR$/screens/auth/SignUpScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+            <state relative-caret-position="390">
+              <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -91,7 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reducers/countryReducer.js" />
         <option value="$PROJECT_DIR$/store.js" />
         <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/redux/reducers/ChangeAppStateReducer.js" />
@@ -137,11 +136,12 @@
         <option value="$PROJECT_DIR$/styles/Buttons.js" />
         <option value="$PROJECT_DIR$/styles/Typography.js" />
         <option value="$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js" />
-        <option value="$PROJECT_DIR$/navigation/AuthStack.js" />
-        <option value="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" />
         <option value="$PROJECT_DIR$/styles/Input.js" />
         <option value="$PROJECT_DIR$/styles/Inputs.js" />
         <option value="$PROJECT_DIR$/screens/auth/SignInScreen.js" />
+        <option value="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" />
+        <option value="$PROJECT_DIR$/navigation/AuthStack.js" />
+        <option value="$PROJECT_DIR$/screens/auth/SignUpScreen.js" />
       </list>
     </option>
   </component>
@@ -195,7 +195,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552315157058" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552315719631" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/backend/node_modules/typescript/lib" />
   </component>
@@ -204,8 +204,8 @@
       <recent name="$PROJECT_DIR$/screens/auth" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/styles" />
       <recent name="$PROJECT_DIR$/screens/auth" />
+      <recent name="$PROJECT_DIR$/styles" />
       <recent name="$PROJECT_DIR$/navigation" />
       <recent name="$PROJECT_DIR$/redux/reducers" />
       <recent name="$PROJECT_DIR$/redux/actions" />
@@ -241,7 +241,7 @@
       <workItem from="1552296057537" duration="16000" />
       <workItem from="1552296088202" duration="632000" />
       <workItem from="1552297024480" duration="900000" />
-      <workItem from="1552298255856" duration="12682000" />
+      <workItem from="1552298255856" duration="13359000" />
     </task>
     <task id="LOCAL-00001" summary="Added Authentication flow">
       <created>1552303927871</created>
@@ -271,12 +271,12 @@
       <option name="project" value="LOCAL" />
       <updated>1552312474307</updated>
     </task>
-    <task id="LOCAL-00005" summary="Add fetching establishments">
-      <created>1550583998129</created>
+    <task id="LOCAL-00005" summary="Added SignIn screen">
+      <created>1552315280239</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1550583998129</updated>
+      <updated>1552315280239</updated>
     </task>
     <task id="LOCAL-00006" summary="Add establishment showing">
       <created>1550665254736</created>
@@ -320,11 +320,11 @@
       <option name="project" value="LOCAL" />
       <updated>1552294646780</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14234000" />
+    <option name="totallyTimeSpent" value="14911000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="954" extended-state="0" />
@@ -410,7 +410,8 @@
     <MESSAGE value="Implemented logout" />
     <MESSAGE value="Fixed login" />
     <MESSAGE value="Added welcome screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added welcome screen" />
+    <MESSAGE value="Added SignIn screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added SignIn screen" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/components/Autocomplete.js">
@@ -641,9 +642,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/styles/Inputs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/auth/SignInScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/auth/WelcomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="360">
           <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -653,35 +681,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/navigation/AuthStack.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="10" />
+        <state relative-caret-position="135">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/Inputs.js">
+    <entry file="file://$PROJECT_DIR$/screens/auth/SignUpScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/auth/WelcomeScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="20" selection-end-column="115" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/auth/SignInScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+        <state relative-caret-position="390">
+          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

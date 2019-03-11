@@ -20,6 +20,7 @@ export default class WelcomeScreen extends React.Component {
                                 onPress={this._onSignInPress}
                                 buttonStyle={[Buttons.rounded.outlineStyle, {width: widthPercentageToDP('75%')}]}/>
                         <Button title={'Sign Up'} titleStyle={Buttons.rounded.title}
+                                onPress={this._onSignUpPress}
                                 buttonStyle={[Buttons.rounded.solidStyle, {width: widthPercentageToDP('75%')}]}/>
                     </View>
                 </View>
@@ -35,6 +36,10 @@ export default class WelcomeScreen extends React.Component {
 
     _onSignInPress = () => {
         this.props.navigation.navigate('SignIn');
+    }
+
+    _onSignUpPress = () => {
+        this.props.navigation.navigate('SignUp');
     }
 }
 

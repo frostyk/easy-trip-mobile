@@ -9,7 +9,7 @@ import Inputs from '../../styles/Inputs'
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
 import Buttons from "../../styles/Buttons";
 
-class SignInScreen extends React.Component {
+class SignUpScreen extends React.Component {
     static navigationOptions = {
         title: '',
     };
@@ -29,11 +29,22 @@ class SignInScreen extends React.Component {
                             <Input
                                 inputContainerStyle={Inputs.rounded.inputContainerStyle}
                                 inputStyle={Inputs.rounded.inputStyle}
+                                placeholder='First Name'
+                            />
+                            <Input
+                                inputContainerStyle={Inputs.rounded.inputContainerStyle}
+                                inputStyle={Inputs.rounded.inputStyle}
+                                placeholder='Last Name'
+                            />
+
+                            <Input
+                                inputContainerStyle={Inputs.rounded.inputContainerStyle}
+                                inputStyle={Inputs.rounded.inputStyle}
                                 placeholder='Password'
                                 secureTextEntry={true}
                             />
 
-                            <Button title={'Log In'}  titleStyle={Buttons.rounded.title}
+                            <Button title={'Sign Up'}  titleStyle={Buttons.rounded.title}
                                     onPress={this._onSignInPress}
                                     buttonStyle={[Buttons.rounded.solidStyle, {width: widthPercentageToDP('50%')}]}/>
                         </View>
@@ -62,7 +73,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 
-export default connect(mapStateToProps, actions)(SignInScreen);
+export default connect(mapStateToProps, actions)(SignUpScreen);
 
 const styles = StyleSheet.create({
     container: {
@@ -78,7 +89,7 @@ const styles = StyleSheet.create({
     inputs: {
         justifyContent: 'space-between',
         alignItems: 'center',
-        height: heightPercentageToDP('20%'),
+        height: heightPercentageToDP('30%'),
         marginTop: heightPercentageToDP('10%'),
         width: widthPercentageToDP('75%')
     }
