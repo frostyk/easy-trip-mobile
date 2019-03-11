@@ -3,6 +3,7 @@ import {ScrollView, StyleSheet, Text} from 'react-native';
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 import {Button, Card, Icon} from "react-native-elements";
+import {GOOGLE_API_KEY} from "../constants/Google";
 
 class EstablishmentsScreen extends React.Component {
     static navigationOptions = ({navigation}) => {
@@ -25,8 +26,7 @@ class EstablishmentsScreen extends React.Component {
                         <Card
                             key={index}
                             title={item.name}
-                            // image={{uri: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`}}>
-                        >
+                            image={{uri: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`}}>
                             <Text style={{marginBottom: 10}}>
                                 {item.vicinity}
                             </Text>

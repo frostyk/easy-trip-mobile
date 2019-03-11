@@ -15,10 +15,10 @@ class Autocomplete extends React.Component {
     };
 
     onItemPress = item => {
-        // const establishmentsTypes = [RESTAURANT, MUSEUM, PARK, ZOO, NIGHT_CLUB, CAFE];
-        const establishmentsTypes = [RESTAURANT];
+        const establishmentsTypes = [RESTAURANT, MUSEUM, PARK, ZOO, NIGHT_CLUB, CAFE];
+        const testedTypes = [RESTAURANT];
         this.props.cleanPlaces();
-        establishmentsTypes.forEach(type => {
+        testedTypes.forEach(type => {
             this.props.geocodeAddressByPlaceIdAndFindPlaces(item.place_id, type, 1500);
         });
     };

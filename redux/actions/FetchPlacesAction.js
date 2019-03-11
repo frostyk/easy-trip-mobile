@@ -1,5 +1,6 @@
 import {FETCH_PLACES_FAILURE, FETCH_PLACES_REQUEST, FETCH_PLACES_SUCCESS} from "./types/types";
 import axios from "axios";
+import {GOOGLE_API_KEY} from "../../constants/Google";
 
 
 const fetchPlacesRequest = () => {
@@ -23,7 +24,7 @@ const fetchPlacesFailure = (err) => {
 };
 
 const fetch = (name) => {
-   return axios.get(`https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${name}&types=(regions)&key=AIzaSyAmI4piO1wcjs4XWSNQW8W8srY7hDfKIKc`);
+   return axios.get(`https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${name}&types=(regions)&key=${GOOGLE_API_KEY}`);
 };
 
 
