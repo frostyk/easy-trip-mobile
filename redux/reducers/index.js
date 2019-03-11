@@ -9,6 +9,7 @@ import {changeEstablishmentScreenReducer} from "./ChangeEstablishmentScreenState
 import {changeEstablishmentDetailsScreenReducer} from "./ChangeEstablishmentDetailsScreenStateReducer";
 import {fetchEstablishmentDetailsReducer} from "./FetchEstablishmentDetailsReducer";
 import {loginReducer} from "./LoginReducer";
+import {logoutReducer} from "./LogoutReducer";
 
 export default combineReducers({
     countries: fetchCountriesReducer,
@@ -20,5 +21,6 @@ export default combineReducers({
     establishmentScreenState: changeEstablishmentScreenReducer,
     establishmentDetailsScreenState: changeEstablishmentDetailsScreenReducer,
     establishmentDetails: fetchEstablishmentDetailsReducer,
-    login: loginReducer
+    loginState: loginReducer,
+    logoutState: logoutReducer,
 });

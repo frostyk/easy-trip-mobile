@@ -123,7 +123,6 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state.login);
     return {
         establishments: state.establishmentsStore
     };

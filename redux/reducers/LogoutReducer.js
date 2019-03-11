@@ -1,4 +1,4 @@
-import {LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS} from "../actions/types/types";
+import {LOGOUT_FAILURE, LOGOUT_REQUEST, LOGOUT_SUCCESS} from "../actions/types/types";
 
 const initialState = {
     isFetching: false,
@@ -6,26 +6,26 @@ const initialState = {
     error: ''
 };
 
-export const loginReducer = (state = initialState, action) => {
+export const logoutReducer = (state = initialState, action) => {
     switch (action.type) {
-        case LOGIN_REQUEST:
-            console.log('Login ~');
+
+        case LOGOUT_REQUEST:
+            console.log('Logout ~');
 
             return {
                 ...state,
                 isFetching: true
             };
-        case LOGIN_SUCCESS:
-            console.log('Login +');
-
+        case LOGOUT_SUCCESS:
+            console.log('Logout +');
             return {
                 ...state,
                 isFetching: false,
                 isSuccessful: true
             };
 
-        case LOGIN_FAILURE:
-            console.log('Login -');
+        case LOGOUT_FAILURE:
+            console.log('Logout -');
 
             return {
                 ...state,

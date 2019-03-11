@@ -10,7 +10,7 @@ export const onSignIn = (key) => {
 };
 
 
-export const onSignOut = () => {
+export const onSignOut = async () => {
     axios.defaults.headers.common['Authorization'] = ``;
     return AsyncStorage.removeItem(BEARER_KEY)
 };

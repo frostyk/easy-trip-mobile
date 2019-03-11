@@ -1,28 +1,34 @@
 import React from 'react';
-import {ScrollView, StyleSheet} from 'react-native';
+import {SafeAreaView, StyleSheet, View} from 'react-native';
 import {Button} from "react-native-elements";
 
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 
- class SignInScreen extends React.Component {
+class SignInScreen extends React.Component {
     static navigationOptions = {
         title: 'SignIn',
     };
 
     render() {
         return (
-            <ScrollView style={styles.container}>
-                <Button
-                    title={'SignIn'}
-                    onPress={this._signInAsync}
-                />
-            </ScrollView>
+            <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+                <View style={styles.container}>
+                    <Button
+                        title={'SignIn'}
+                        onPress={this._signInAsync}
+                    />
+                </View>
+            </SafeAreaView>
         );
     }
 
-    _signInAsync = async () => {
-        await this.props.login({
+    componentWillReceiveProps(nextProps, nextContext) {
+        console.log('Component will receive props');
+    }
+
+    _signInAsync = () => {
+        this.props.login({
             password: "admin",
             rememberMe: false,
             username: "admin"

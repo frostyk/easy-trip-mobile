@@ -6,37 +6,43 @@ import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 
 class SettingsScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Settings',
-  };
+    static navigationOptions = {
+        title: 'Settings',
+    };
 
-  render() {
-    return (
-        <ScrollView style={styles.container}>
-          <Button
-              title={'Logout'}
-              onPress={this._signInAsync}
-          />
-        </ScrollView>
-    );
-  }
+    render() {
+        return (
+            <ScrollView style={styles.container}>
+                <Button
+                    title={'Logout'}
+                    onPress={this._logoutAsync}
+                />
+            </ScrollView>
+        );
+    }
 
-  _signInAsync = async () => {
-    await this.props.login({
-      password: "admin",
-      rememberMe: false,
-      username: "admin"
-    });
-  }
+    componentDidUpdate() {
+        this.props.navigation.navigate('AuthLoading');
+    }
+
+    _logoutAsync = () => {
+        this.props.logout();
+    }
 }
 
+const mapStateToProps = (state, ownProps) => {
+    return {
+        login: state.loginState,
+        logout: state.logoutState,
+    };
+};
 
-export default connect(null, actions)(SettingsScreen);
+export default connect(mapStateToProps, actions)(SettingsScreen);
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
-  },
+    container: {
+        flex: 1,
+        paddingTop: 15,
+        backgroundColor: '#fff',
+    },
 });

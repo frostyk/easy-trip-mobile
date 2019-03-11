@@ -33,8 +33,8 @@ export const login = (user) => {
         fetchLogin(user)
             .then(res => {
                 if (res.data.id_token) {
+                    dispatch(loginSuccess());
                     dispatch(onSignIn(res.data.id_token));
-                    dispatch(loginSuccess())
                 } else {
                     dispatch(loginFailure(`Can't fetch id_token`))
                 }
