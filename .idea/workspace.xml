@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="58b6431e-fc73-4d97-bd26-14c19e5c3cf3" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/Autocomplete.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="523">
+              <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>COUNTRIES</find>
+      <find>Countries</find>
+      <find>fetchPlacesBy</find>
+      <find>fetchPlaces</find>
+      <find>PLACES</find>
+      <find>Places</find>
+      <find>axios</find>
+      <find>places</find>
+      <find>this.navigateToAndSetTitle('Establishments', 'Museums')</find>
+      <find>ESTABLISHMENTS</find>
+      <find>Establishments</find>
+      <find>geocodeAddressSuccess</find>
+      <find>20</find>
+      <find>geocodeAddressByPlaceIdAndFindPlaces</find>
+      <find>fetchEstablishmentsNearby</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>PLACES</replace>
+      <replace>places</replace>
+      <replace>Places</replace>
+      <replace>GEOCODE_ADDRESS</replace>
+      <replace>geocodeAddress</replace>
+      <replace>Establishments</replace>
+      <replace>ESTABLISHMENTS</replace>
+      <replace>establishments</replace>
+      <replace>{route: 'Establishments', title: 'Cafes'}</replace>
+      <replace>{route: 'Establishments', title: 'Parks'}</replace>
+      <replace>{route: 'Establishments', title: 'Zoos'}</replace>
+      <replace>{route: 'Establishments', title: 'Museums'}</replace>
+      <replace>ESTABLISHMENT_DETAILS</replace>
+      <replace>EstablishmentDetails</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/actions/types.js" />
+        <option value="$PROJECT_DIR$/actions/country.js" />
+        <option value="$PROJECT_DIR$/reducers/countryReducer.js" />
+        <option value="$PROJECT_DIR$/store.js" />
+        <option value="$PROJECT_DIR$/App.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/ChangeAppStateReducer.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/CreateSalaReducer.js" />
+        <option value="$PROJECT_DIR$/redux/actions/CreateSalaAction.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/FetchCountriesReducer.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/ChangeHomeScreenStateReducer.js" />
+        <option value="$PROJECT_DIR$/redux/actions/HomeScreenAction.js" />
+        <option value="$PROJECT_DIR$/redux/actions/FetchCountriesAction.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/FetchPlacesReducer.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/GeocodeAddressReducer.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/FetchEstablishmentsReducer.js" />
+        <option value="$PROJECT_DIR$/redux/actions/GeocodeAddressAction.js" />
+        <option value="$PROJECT_DIR$/redux/actions/ManageEstablishmentsAction.js" />
+        <option value="$PROJECT_DIR$/redux/actions/FetchEstablishmentsAction.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/ManageEstablishmentsStateReducer.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/ChangeEstablishmentScreenStateReducer.js" />
+        <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
+        <option value="$PROJECT_DIR$/redux/actions/EstablishmentScreenAction.js" />
+        <option value="$PROJECT_DIR$/navigation/MainTabNavigator.js" />
+        <option value="$PROJECT_DIR$/redux/actions/EstablishmentDetailsScreenAction.js" />
+        <option value="$PROJECT_DIR$/redux/actions/types/types.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/FetchEstablishmentDetailsReducer.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/index.js" />
+        <option value="$PROJECT_DIR$/redux/actions/FetchEstablishmentDetailsAction.js" />
+        <option value="$PROJECT_DIR$/redux/actions/index.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/ChangeEstablishmentDetailsScreenStateReducer.js" />
+        <option value="$PROJECT_DIR$/screens/EstablishmentDetailsScreen.js" />
+        <option value="$PROJECT_DIR$/screens/EstablishmentsScreen.js" />
+        <option value="$PROJECT_DIR$/constants/Google.js" />
+        <option value="$PROJECT_DIR$/redux/actions/FetchPlacesAction.js" />
+        <option value="$PROJECT_DIR$/components/Autocomplete.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="954" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58b6431e-fc73-4d97-bd26-14c19e5c3cf3" name="Default Changelist" comment="" />
+      <created>1550505538558</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550505538558</updated>
+      <workItem from="1550505539804" duration="25595000" />
+      <workItem from="1550669154101" duration="1983000" />
+      <workItem from="1550749290439" duration="9404000" />
+      <workItem from="1550834778246" duration="396000" />
+      <workItem from="1552292993724" duration="2276000" />
+      <workItem from="1552296057537" duration="16000" />
+    </task>
+    <task id="LOCAL-00001" summary="Init project">
+      <created>1550506008943</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1550506008944</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add redux">
+      <created>1550516353589</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1550516353589</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add country autocomplete">
+      <created>1550521038689</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1550521038689</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add fetch places action">
+      <created>1550579451048</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1550579451048</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add fetching establishments">
+      <created>1550583998129</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1550583998129</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add establishment showing">
+      <created>1550665254736</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1550665254736</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add establishment screen">
+      <created>1550671043413</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1550671043413</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add establishment details screen">
+      <created>1550757748330</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550757748330</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Implemented reviews tab">
+      <created>1550758357372</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1550758357372</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implemented location tab">
+      <created>1550759308535</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1550759308535</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactore code">
+      <created>1552294646780</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1552294646780</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="20000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="954" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32946634" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="TypeScript" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/components/Autocomplete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,35 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.frostyk"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "backend",
+    "packageName": "com.frostyk",
+    "packageFolder": "com/frostyk",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NTQwMTQ4NmE0MTk1ODcyMDg2YTI5NWU2M2Q4YzU5ZTA5MWMxZDI5YWQwNzY1Yjg4NjY5ZDJkNzIyMzQxOTgyOWM5ZjNjMTU0N2JlYzViOWIxM2FkNjhlYTk2MjQ3ZWRjZmU5Y2RiOTQzYTY4NWQzZTMxNDQ5MGMxZjY3NjZiYmU=",
+    "clientFramework": "react",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false
+  }
+}
