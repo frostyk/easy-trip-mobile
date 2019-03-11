@@ -1,8 +1,8 @@
 import React from 'react';
 import {ActivityIndicator, StatusBar, View} from 'react-native';
-import {isSignedIn} from "../auth/auth";
+import {isSignedIn} from "../../auth/auth";
 import {connect} from "react-redux";
-import * as actions from "../redux/actions";
+import * as actions from "../../redux/actions";
 
 class AuthLoadingScreen extends React.Component {
     constructor(props) {
@@ -19,17 +19,6 @@ class AuthLoadingScreen extends React.Component {
         }
     };
 
-   componentDidUpdate() {
-       console.log('Did update');
-   }
-
-   componentWillReceiveProps(nextProps, nextContext) {
-       console.log('Will receive props');
-   }
-
-    componentDidMount() {
-       console.log('Did mount');
-   }
 
     render() {
         return (
@@ -42,8 +31,6 @@ class AuthLoadingScreen extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log('AUTH');
-    console.log(state);
     return {
         login: state.loginState,
         logout: state.logoutState,
