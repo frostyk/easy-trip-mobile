@@ -32,22 +32,42 @@ class HomeScreen extends React.Component {
     };
 
     renderRestaurants = (establishments) => {
-        return this.renderEstablishmentListItem(0, 'Restaurants', establishments.restaurants.length, 'restaurant', {route: 'Establishments', title: 'Restaurants', establishments: this.props.establishments.restaurants})
+        return this.renderEstablishmentListItem(0, 'Restaurants', establishments.restaurants.length, 'restaurant', {
+            route: 'Establishments',
+            title: 'Restaurants',
+            establishments: this.props.establishments.restaurants
+        })
     };
     renderCafes = (establishments) => {
-        return this.renderEstablishmentListItem(1, 'Cafes', establishments.cafes.length, 'local-cafe', {route: 'Establishments', title: 'Cafes', establishments: this.props.establishments.cafes})
+        return this.renderEstablishmentListItem(1, 'Cafes', establishments.cafes.length, 'local-cafe', {
+            route: 'Establishments',
+            title: 'Cafes',
+            establishments: this.props.establishments.cafes
+        })
     };
 
     renderParks = (establishments) => {
-        return this.renderEstablishmentListItem(2, 'Parks', establishments.parks.length, 'local-parking', {route: 'Establishments', title: 'Parks', establishments: this.props.establishments.parks})
+        return this.renderEstablishmentListItem(2, 'Parks', establishments.parks.length, 'local-parking', {
+            route: 'Establishments',
+            title: 'Parks',
+            establishments: this.props.establishments.parks
+        })
     };
 
     renderZoos = (establishments) => {
-        return this.renderEstablishmentListItem(3, 'Zoos', establishments.zoos.length, 'pets', {route: 'Establishments', title: 'Zoos',  establishments: this.props.establishments.zoos})
+        return this.renderEstablishmentListItem(3, 'Zoos', establishments.zoos.length, 'pets', {
+            route: 'Establishments',
+            title: 'Zoos',
+            establishments: this.props.establishments.zoos
+        })
     };
 
     renderMuseums = (establishments) => {
-        return this.renderEstablishmentListItem(4, 'Museums', establishments.museums.length, 'pets', {route: 'Establishments', title: 'Museums', establishments: this.props.establishments.museums})
+        return this.renderEstablishmentListItem(4, 'Museums', establishments.museums.length, 'pets', {
+            route: 'Establishments',
+            title: 'Museums',
+            establishments: this.props.establishments.museums
+        })
     };
 
     render() {
@@ -103,6 +123,7 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state, ownProps) => {
+    console.log(state.login);
     return {
         establishments: state.establishmentsStore
     };

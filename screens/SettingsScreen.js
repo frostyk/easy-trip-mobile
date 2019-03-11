@@ -1,14 +1,42 @@
 import React from 'react';
-import { ExpoConfigView } from '@expo/samples';
+import {ScrollView, StyleSheet} from 'react-native';
+import {Button} from "react-native-elements";
 
-export default class SettingsScreen extends React.Component {
+import {connect} from "react-redux";
+import * as actions from "../redux/actions";
+
+class SettingsScreen extends React.Component {
   static navigationOptions = {
-    title: 'app.json',
+    title: 'Settings',
   };
 
   render() {
-    /* Go ahead and delete ExpoConfigView and replace it with your
-     * content, we just wanted to give you a quick view of your config */
-    return <ExpoConfigView />;
+    return (
+        <ScrollView style={styles.container}>
+          <Button
+              title={'Logout'}
+              onPress={this._signInAsync}
+          />
+        </ScrollView>
+    );
+  }
+
+  _signInAsync = async () => {
+    await this.props.login({
+      password: "admin",
+      rememberMe: false,
+      username: "admin"
+    });
   }
 }
+
+
+export default connect(null, actions)(SettingsScreen);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 15,
+    backgroundColor: '#fff',
+  },
+});
