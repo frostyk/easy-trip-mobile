@@ -34,6 +34,8 @@ class SignInScreen extends React.Component {
                                 inputStyle={Inputs.rounded.inputStyle}
                                 placeholder='E-mail'
                                 onChangeText={(text) => this.setState({loginInput: text})}
+                                autoCapitalize={'none'}
+
                             />
                             <Input
                                 inputContainerStyle={Inputs.rounded.inputContainerStyle}
@@ -41,6 +43,8 @@ class SignInScreen extends React.Component {
                                 placeholder='Password'
                                 onChangeText={(text) => this.setState({passwordInput: text})}
                                 secureTextEntry={true}
+                                autoCapitalize={'none'}
+
                             />
 
                             <Button title={'Log In'} titleStyle={Buttons.rounded.title}

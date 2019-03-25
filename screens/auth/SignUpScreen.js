@@ -14,6 +14,19 @@ class SignUpScreen extends React.Component {
         title: '',
     };
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: '',
+            login: '',
+            firstName: '',
+            lastName: '',
+            password: '',
+            langKey: 'en'
+        }
+    }
+
+
     render() {
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
@@ -24,28 +37,41 @@ class SignUpScreen extends React.Component {
                             <Input
                                 inputContainerStyle={Inputs.rounded.inputContainerStyle}
                                 inputStyle={Inputs.rounded.inputStyle}
+                                onChangeText={(text) => this.setState({email: text, login: text})}
                                 placeholder='E-mail'
+                                autoCapitalize={'none'}
+
                             />
                             <Input
                                 inputContainerStyle={Inputs.rounded.inputContainerStyle}
                                 inputStyle={Inputs.rounded.inputStyle}
+                                onChangeText={(text) => this.setState({firstName: text})}
                                 placeholder='First Name'
+                                autoCapitalize={'none'}
+
+
                             />
                             <Input
                                 inputContainerStyle={Inputs.rounded.inputContainerStyle}
                                 inputStyle={Inputs.rounded.inputStyle}
+                                onChangeText={(text) => this.setState({lastName: text})}
                                 placeholder='Last Name'
+                                autoCapitalize={'none'}
+
+
                             />
 
                             <Input
                                 inputContainerStyle={Inputs.rounded.inputContainerStyle}
                                 inputStyle={Inputs.rounded.inputStyle}
+                                onChangeText={(text) => this.setState({password: text})}
                                 placeholder='Password'
                                 secureTextEntry={true}
+                                autoCapitalize={'none'}
                             />
 
                             <Button title={'Sign Up'}  titleStyle={Buttons.rounded.title}
-                                    onPress={this._onSignInPress}
+                                    onPress={this._onSignUpPress}
                                     buttonStyle={[Buttons.rounded.solidStyle, {width: widthPercentageToDP('60%')}]}/>
                         </View>
                     </View>
@@ -55,20 +81,21 @@ class SignUpScreen extends React.Component {
     }
 
     componentDidUpdate() {
-        if (this.props.loginState.isSuccessful) {
+        if (this.props.registerState.isSuccessful) {
             this.props.navigation.navigate('AuthLoading');
         }
     }
 
-    _onSignInPress = () => {
-        this.props.login({});
+    _onSignUpPress = () => {
+        this.props.register(this.state);
     }
 
 }
 
 const mapStateToProps = (state, ownProps) => {
+    console.log(state);
     return {
-        loginState: state.loginState
+        registerState: state.loginState
     };
 };
 

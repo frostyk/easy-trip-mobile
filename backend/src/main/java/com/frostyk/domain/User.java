@@ -62,7 +62,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     @NotNull
     @Column(nullable = false)
-    private boolean activated = false;
+    private boolean activated = true;
 
     @Size(min = 2, max = 6)
     @Column(name = "lang_key", length = 6)
@@ -86,7 +86,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
     private Instant resetDate = null;
 
     @JsonIgnore
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
         name = "jhi_user_authority",
         joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},

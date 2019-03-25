@@ -22,10 +22,9 @@ const loginFailure = (err) => {
         payload: err
     }
 };
-const loginReset = (err) => {
+const loginReset = () => {
     return {
-        type: LOGIN_RESET,
-        payload: err
+        type: LOGIN_RESET
     }
 };
 
