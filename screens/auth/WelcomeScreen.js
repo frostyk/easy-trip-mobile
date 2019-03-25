@@ -14,7 +14,7 @@ export default class WelcomeScreen extends React.Component {
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
                 <View style={styles.container}>
-                    <Text style={Typography.largeTitle}>Easy Trip</Text>
+                    <Text style={Typography.h1}>Easy Trip</Text>
                     <View style={styles.buttons}>
                         <Button title={'Log In'} type={'outline'} titleStyle={Buttons.rounded.title}
                                 onPress={this._onSignInPress}

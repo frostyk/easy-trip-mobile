@@ -27,7 +27,7 @@ class SignInScreen extends React.Component {
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
                 <View style={styles.container}>
                     <View style={styles.innerContainer}>
-                        <Text style={[Typography.largeTitle, {alignSelf: 'flex-start'}]}>Sign In</Text>
+                        <Text style={[Typography.h1, {alignSelf: 'flex-start'}]}>Sign In</Text>
                         <View style={styles.inputs}>
                             <Input
                                 inputContainerStyle={Inputs.rounded.inputContainerStyle}
