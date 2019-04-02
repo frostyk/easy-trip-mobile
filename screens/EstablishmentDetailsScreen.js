@@ -1,11 +1,11 @@
 import React from 'react';
-import {ActivityIndicator, ScrollView, StyleSheet, View} from 'react-native';
+import {ActivityIndicator, ScrollView, StyleSheet, View, Text} from 'react-native';
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 import {AirbnbRating, ButtonGroup, Card, Divider, Image, ListItem} from "react-native-elements";
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
 import {GOOGLE_API_KEY} from "../constants/Google";
-import {MapView, Text} from 'expo';
+import {MapView} from 'expo';
 
 class EstablishmentDetailsScreen extends React.Component {
     static navigationOptions = ({navigation}) => {

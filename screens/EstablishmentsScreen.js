@@ -26,7 +26,7 @@ class EstablishmentsScreen extends React.Component {
                         <Card
                             key={index}
                             title={item.name}
-                            image={{uri: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`}}>
+                            image={{uri: item.img}}>
                             <Text style={{marginBottom: 10}}>
                                 {item.vicinity}
                             </Text>

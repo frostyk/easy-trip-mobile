@@ -6,7 +6,8 @@ export default {
             borderWidth: 1,
             borderColor: iOSColors.gray,
             borderRadius: 20,
-            paddingLeft: 10
+            paddingLeft: 10,
+            marginVertical: 20
         },
         inputStyle: {
             ...human.footnoteObject,

@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58b6431e-fc73-4d97-bd26-14c19e5c3cf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Divider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/ProfileScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/MainTabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/MainTabNavigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/LinksScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/auth/SignInScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/SignInScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/auth/SignUpScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/SignUpScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/.h2.server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/.h2.server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Autocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Autocomplete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/EstablishmentDetailsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/EstablishmentDetailsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/EstablishmentsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/EstablishmentsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Typography.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inputs.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Inputs.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,10 +36,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/screens/ProfileScreen.js">
+        <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+            <state relative-caret-position="399">
+              <caret line="182" column="32" lean-forward="true" selection-start-line="182" selection-start-column="32" selection-end-line="182" selection-end-column="32" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -50,8 +51,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Countries</find>
-      <find>fetchPlacesBy</find>
       <find>fetchPlaces</find>
       <find>PLACES</find>
       <find>Places</find>
@@ -62,7 +61,6 @@
       <find>Establishments</find>
       <find>geocodeAddressSuccess</find>
       <find>20</find>
-      <find>geocodeAddressByPlaceIdAndFindPlaces</find>
       <find>fetchEstablishmentsNearby</find>
       <find>GEOCODE_ADDRESS</find>
       <find>geocodeAddress</find>
@@ -80,6 +78,9 @@
       <find>ProfileScreen</find>
       <find>&lt;Text</find>
       <find>largeTitle</find>
+      <find>renderDescription</find>
+      <find>listHeader</find>
+      <find>geocodeAddressByPlaceIdAndFindPlaces</find>
     </findStrings>
     <replaceStrings>
       <replace>PLACES</replace>
@@ -106,6 +107,7 @@
       <replace>register</replace>
       <replace>REGISTER</replace>
       <replace>h1</replace>
+      <replace>listItem</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -119,14 +121,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/redux/reducers/FetchCountriesReducer.js" />
         <option value="$PROJECT_DIR$/redux/reducers/ChangeHomeScreenStateReducer.js" />
         <option value="$PROJECT_DIR$/redux/actions/HomeScreenAction.js" />
         <option value="$PROJECT_DIR$/redux/actions/FetchCountriesAction.js" />
         <option value="$PROJECT_DIR$/redux/reducers/FetchPlacesReducer.js" />
         <option value="$PROJECT_DIR$/redux/reducers/GeocodeAddressReducer.js" />
         <option value="$PROJECT_DIR$/redux/reducers/FetchEstablishmentsReducer.js" />
-        <option value="$PROJECT_DIR$/redux/actions/GeocodeAddressAction.js" />
         <option value="$PROJECT_DIR$/redux/actions/ManageEstablishmentsAction.js" />
         <option value="$PROJECT_DIR$/redux/actions/FetchEstablishmentsAction.js" />
         <option value="$PROJECT_DIR$/redux/reducers/ManageEstablishmentsStateReducer.js" />
@@ -136,15 +136,11 @@
         <option value="$PROJECT_DIR$/redux/reducers/FetchEstablishmentDetailsReducer.js" />
         <option value="$PROJECT_DIR$/redux/actions/FetchEstablishmentDetailsAction.js" />
         <option value="$PROJECT_DIR$/redux/reducers/ChangeEstablishmentDetailsScreenStateReducer.js" />
-        <option value="$PROJECT_DIR$/screens/EstablishmentDetailsScreen.js" />
-        <option value="$PROJECT_DIR$/screens/EstablishmentsScreen.js" />
         <option value="$PROJECT_DIR$/constants/Google.js" />
         <option value="$PROJECT_DIR$/redux/actions/FetchPlacesAction.js" />
-        <option value="$PROJECT_DIR$/components/Autocomplete.js" />
         <option value="$PROJECT_DIR$/auth/auth.js" />
         <option value="$PROJECT_DIR$/redux/actions/LogoutAction.js" />
         <option value="$PROJECT_DIR$/redux/reducers/LogoutReducer.js" />
-        <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
         <option value="$PROJECT_DIR$/screens/AuthLoadingScreen.js" />
         <option value="$PROJECT_DIR$/screens/SettingsScreen.js" />
         <option value="$PROJECT_DIR$/screens/SignInScreen.js" />
@@ -153,7 +149,6 @@
         <option value="$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js" />
         <option value="$PROJECT_DIR$/styles/Input.js" />
         <option value="$PROJECT_DIR$/navigation/AuthStack.js" />
-        <option value="$PROJECT_DIR$/styles/Inputs.js" />
         <option value="$PROJECT_DIR$/redux/reducers/LoginReducer.js" />
         <option value="$PROJECT_DIR$/redux/actions/types/types.js" />
         <option value="$PROJECT_DIR$/redux/actions/index.js" />
@@ -165,11 +160,18 @@
         <option value="$PROJECT_DIR$/screens/LinksScreen.js" />
         <option value="$PROJECT_DIR$/navigation/MainTabNavigator.js" />
         <option value="$PROJECT_DIR$/screens/auth/SignUpScreen.js" />
-        <option value="$PROJECT_DIR$/screens/auth/SignInScreen.js" />
-        <option value="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" />
         <option value="$PROJECT_DIR$/styles/Typography.js" />
         <option value="$PROJECT_DIR$/components/Divider.js" />
         <option value="$PROJECT_DIR$/screens/ProfileScreen.js" />
+        <option value="$PROJECT_DIR$/styles/Inputs.js" />
+        <option value="$PROJECT_DIR$/screens/auth/SignInScreen.js" />
+        <option value="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" />
+        <option value="$PROJECT_DIR$/screens/EstablishmentDetailsScreen.js" />
+        <option value="$PROJECT_DIR$/screens/EstablishmentsScreen.js" />
+        <option value="$PROJECT_DIR$/components/List.js" />
+        <option value="$PROJECT_DIR$/components/Autocomplete.js" />
+        <option value="$PROJECT_DIR$/redux/actions/GeocodeAddressAction.js" />
+        <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
       </list>
     </option>
   </component>
@@ -199,18 +201,24 @@
             <path>
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
               <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="navigation" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
               <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
@@ -221,28 +229,29 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553540322105" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554205413382" />
     <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/backend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/screens/auth" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/redux/reducers" />
       <recent name="$PROJECT_DIR$/redux/actions" />
       <recent name="$PROJECT_DIR$/screens/auth" />
       <recent name="$PROJECT_DIR$/styles" />
-      <recent name="$PROJECT_DIR$/navigation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/screens/auth" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -276,7 +285,12 @@
       <workItem from="1552296088202" duration="632000" />
       <workItem from="1552297024480" duration="900000" />
       <workItem from="1552298255856" duration="18579000" />
-      <workItem from="1553527848240" duration="4748000" />
+      <workItem from="1553527848240" duration="5405000" />
+      <workItem from="1553605213669" duration="467000" />
+      <workItem from="1554127623622" duration="29000" />
+      <workItem from="1554127672122" duration="442000" />
+      <workItem from="1554128735439" duration="869000" />
+      <workItem from="1554194079459" duration="8767000" />
     </task>
     <task id="LOCAL-00001" summary="Added Authentication flow">
       <created>1552303927871</created>
@@ -327,12 +341,12 @@
       <option name="project" value="LOCAL" />
       <updated>1552320707830</updated>
     </task>
-    <task id="LOCAL-00008" summary="Add establishment details screen">
-      <created>1550757748330</created>
+    <task id="LOCAL-00008" summary="Added Profile Tab">
+      <created>1553540371795</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1550757748330</updated>
+      <updated>1553540371795</updated>
     </task>
     <task id="LOCAL-00009" summary="Implemented reviews tab">
       <created>1550758357372</created>
@@ -355,17 +369,17 @@
       <option name="project" value="LOCAL" />
       <updated>1552294646780</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24879000" />
+    <option name="totallyTimeSpent" value="36110000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="954" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="954" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2771673" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2936508" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -380,7 +394,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32946634" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32830626" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -399,6 +413,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -448,7 +472,8 @@
     <MESSAGE value="Added SignIn screen" />
     <MESSAGE value="Added SignUp screen" />
     <MESSAGE value="Connected SignUp to the backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connected SignUp to the backend" />
+    <MESSAGE value="Added Profile Tab" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Profile Tab" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -475,15 +500,6 @@
         <state relative-caret-position="-324">
           <folding>
             <element signature="e#0#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/GeocodeAddressAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-364">
-          <folding>
-            <element signature="e#0#104#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -565,13 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/Inputs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redux/actions/types/types.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -583,16 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,16 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -720,27 +709,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/auth/WelcomeScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-native-typography/dist/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="61" column="2" selection-start-line="61" selection-start-column="2" selection-end-line="61" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/Typography.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -754,23 +726,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/auth/SignInScreen.js">
+    <entry file="file://$PROJECT_DIR$/screens/ProfileScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-690">
-          <caret line="26" column="50" lean-forward="true" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+        <state relative-caret-position="286">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/Autocomplete.js">
+    <entry file="file://$PROJECT_DIR$/redux/actions/HomeScreenAction.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/reducers/ChangeHomeScreenStateReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/Inputs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/auth/SignInScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="98" column="40" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="40" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/auth/WelcomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/Typography.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -784,10 +790,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/ProfileScreen.js">
+    <entry file="file://$PROJECT_DIR$/screens/EstablishmentDetailsScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+        <state relative-caret-position="966">
+          <caret line="151" column="6" lean-forward="true" selection-start-line="151" selection-start-column="6" selection-end-line="156" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/EstablishmentsScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/List.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/Autocomplete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/GeocodeAddressAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/reducers/GeocodeAddressReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="182" column="32" lean-forward="true" selection-start-line="182" selection-start-column="32" selection-end-line="182" selection-end-column="32" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

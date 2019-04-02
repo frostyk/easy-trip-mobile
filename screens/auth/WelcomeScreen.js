@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     },
     buttons: {
         marginTop: heightPercentageToDP('3%'),
-        height: heightPercentageToDP('10%'),
+        height: heightPercentageToDP('15%'),
         justifyContent: 'space-between'
     }
 });

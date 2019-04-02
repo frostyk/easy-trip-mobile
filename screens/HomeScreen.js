@@ -1,9 +1,83 @@
 import React from 'react';
-import {Platform, SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
-import {ListItem} from 'react-native-elements';
+import {Linking, Platform, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Divider, Icon} from 'react-native-elements';
 import Autocomplete from "../components/Autocomplete";
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
+import Typography from "../styles/Typography";
+import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
+import {iOSColors} from "react-native-typography";
+import {List} from "../components/List";
+import {GOOGLE_API_KEY} from "../constants/Google";
+
+const RESTAURANTS = [
+    {
+        img: 'https://dummyimage.com/600x400/000/fff&text=Res+1',
+        name: 'Place 1',
+        vicinity: 'Vcinity'
+    },
+    {
+        img: 'https://dummyimage.com/600x400/000/fff&text=Res+2',
+        name: 'Place 2',
+        vicinity: 'Vcinity'
+    },
+    {
+        img: 'https://dummyimage.com/600x400/000/fff&text=Res+3',
+        name: 'Place 3',
+        vicinity: 'Vcinity'
+    },
+];
+const THEATRES = [
+    {
+        img: 'https://dummyimage.com/600x400/000/fff&text=Theater+1',
+        name: 'Theater 1',
+        vicinity: 'Vcinity'
+    },
+    {
+        img: 'https://dummyimage.com/600x400/000/fff&text=Theater+2',
+        name: 'Theater 2',
+        vicinity: 'Vcinity'
+    },
+    {
+        img: 'https://dummyimage.com/600x400/000/fff&text=Theater+3',
+        name: 'Theater 3',
+        vicinity: 'Vcinity'
+    },
+];
+const MUSEUMS = [
+    {
+        img: 'https://dummyimage.com/500x300/000/4049c2&text=Museum+1',
+        name: 'Museum 1',
+        vicinity: 'Vcinity'
+    },
+    {
+        img: 'https://dummyimage.com/500x300/000/4049c2&text=Museum+2',
+        name: 'Museum 2',
+        vicinity: 'Vcinity'
+    },
+    {
+        img: 'https://dummyimage.com/500x300/000/4049c2&text=Museum+3',
+        name: 'Museum 3',
+        vicinity: 'Vcinity'
+    },
+];
+const HOTELS = [
+    {
+        img: 'https://dummyimage.com/500x300/000/1f5729&text=Hotel+1',
+        name: 'Museum 1',
+        vicinity: 'Vcinity'
+    },
+    {
+        img: 'https://dummyimage.com/500x300/000/1f5729&text=Hotel+2',
+        name: 'Hotel 2',
+        vicinity: 'Vcinity'
+    },
+    {
+        img: 'https://dummyimage.com/500x300/000/1f5729&text=Hotel+3',
+        name: 'Hotel 3',
+        vicinity: 'Vcinity'
+    },
+];
 
 
 class HomeScreen extends React.Component {
@@ -11,79 +85,82 @@ class HomeScreen extends React.Component {
         header: null,
     };
 
-    navigateToAndSetTitle = (routeConfig) => {
-        const {route, title, establishments} = routeConfig;
+    navigateToAndSetTitle = (route, title, establishments) => {
         this.props.navigation.setParams({title});
         this.props.navigation.navigate(route);
         this.props.changeEstablishmentScreenState({establishments})
     };
 
-    renderEstablishmentListItem = (key, title, badgeValue, iconName, routeConfig) => {
-        return (
-            <ListItem
-                key={key}
-                title={title}
-                badge={{value: badgeValue}}
-                chevron={true}
-                leftIcon={{name: iconName}}
-                onPress={() => this.navigateToAndSetTitle(routeConfig)}
-            />
-        );
-    };
+    openMap = () => {
+        const lat = this.props.geocode.results[0].geometry.location.lat;
+        const lng = this.props.geocode.results[0].geometry.location.lng;
+        const scheme = Platform.select({ios: 'maps:0,0?q=', android: 'geo:0,0?q='});
+        const latLng = `${lat},${lng}`;
+        const label = 'Easy Trip Search';
+        const url = Platform.select({
+            ios: `${scheme}${label}@${latLng}`,
+            android: `${scheme}${latLng}(${label})`
+        });
 
-    renderRestaurants = (establishments) => {
-        return this.renderEstablishmentListItem(0, 'Restaurants', establishments.restaurants.length, 'restaurant', {
-            route: 'Establishments',
-            title: 'Restaurants',
-            establishments: this.props.establishments.restaurants
-        })
-    };
-    renderCafes = (establishments) => {
-        return this.renderEstablishmentListItem(1, 'Cafes', establishments.cafes.length, 'local-cafe', {
-            route: 'Establishments',
-            title: 'Cafes',
-            establishments: this.props.establishments.cafes
-        })
-    };
 
-    renderParks = (establishments) => {
-        return this.renderEstablishmentListItem(2, 'Parks', establishments.parks.length, 'local-parking', {
-            route: 'Establishments',
-            title: 'Parks',
-            establishments: this.props.establishments.parks
-        })
-    };
+        Linking.openURL(url);
+    }
 
-    renderZoos = (establishments) => {
-        return this.renderEstablishmentListItem(3, 'Zoos', establishments.zoos.length, 'pets', {
-            route: 'Establishments',
-            title: 'Zoos',
-            establishments: this.props.establishments.zoos
-        })
-    };
-
-    renderMuseums = (establishments) => {
-        return this.renderEstablishmentListItem(4, 'Museums', establishments.museums.length, 'pets', {
-            route: 'Establishments',
-            title: 'Museums',
-            establishments: this.props.establishments.museums
-        })
+    parseEstablishments = (establishments) => {
+        return establishments.map(item => {
+            return {
+                img: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`,
+                name: item.name,
+                vicinity: item.vicinity
+            }
+        });
     };
 
     render() {
-        console.log(this.props);
         const {establishments} = this.props;
+        // const restaurants = this.parseEstablishments(establishments.restaurants); //TODO uncomment for real data
+        const city = this.props.geocode.results.length > 0 ? this.props.geocode.results[0].formatted_address : 'City';
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
                 <View style={styles.container}>
                     <Autocomplete/>
-                    <ScrollView>
+                    <ScrollView contentContainerStyle={{alignItems: 'center'}}>
                         <View style={styles.contentContainer}>
-                            {this.renderRestaurants(establishments)}
-                            {this.renderCafes(establishments)}
-                            {this.renderParks(establishments)}
-                            {this.renderZoos(establishments)}
-                            {this.renderMuseums(establishments)}
+                            <Text style={styles.header}> {city} </Text>
+                            <Divider style={styles.divider}/>
+                            <View style={{alignSelf: 'flex-start', flexDirection: 'row'}}>
+                                <Icon
+                                    name='library-books'
+                                    iconStyle={{padding: 10}}
+                                    color={iOSColors.blue}/>
+                                <TouchableOpacity
+                                    onPress={() => Linking.openURL(`https://www.google.com/search?q=${city}`)}>
+                                    <Text style={styles.link}>About {city}</Text>
+                                </TouchableOpacity>
+                            </View>
+                            <View style={{alignSelf: 'flex-start', flexDirection: 'row'}}>
+                                <Icon
+                                    name='navigation'
+                                    iconStyle={{padding: 10}}
+                                    color={iOSColors.blue}/>
+                                <TouchableOpacity
+                                    onPress={() => this.openMap()}>
+                                    <Text style={styles.link}>Navigate</Text>
+                                </TouchableOpacity>
+                            </View>
+                            <Divider style={styles.divider}/>
+                            <List data={RESTAURANTS} title={'Best Restaurants'}
+                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Restaurants', RESTAURANTS)}/>
+                            <Divider style={styles.divider}/>
+                            <List data={THEATRES} title={'Best Theatres'}
+                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Theatres', THEATRES)}/>
+                            <Divider style={styles.divider}/>
+                            <List data={MUSEUMS} title={'Best Museums'}
+                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Museums', THEATRES)}/>
+                            <Divider style={styles.divider}/>
+                            <List data={HOTELS} title={'Best Hotels'}
+                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Hotels', THEATRES)}/>
+
                         </View>
                     </ScrollView>
                 </View>
@@ -98,7 +175,19 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff'
     },
     contentContainer: {
-        paddingTop: 50,
+        marginTop: 70,
+        shadowOpacity: 0.75,
+        shadowRadius: 2,
+        shadowColor: 'gray',
+        shadowOffset: {height: 0, width: 0},
+        backgroundColor: '#fff',
+        width: widthPercentageToDP('95%'),
+        paddingBottom: 50
+    },
+    header: {
+        ...Typography.title,
+        padding: 10,
+        fontWeight: '600'
     },
     tabBarInfoContainer: {
         position: 'absolute',
@@ -120,11 +209,22 @@ const styles = StyleSheet.create({
         backgroundColor: '#fbfbfb',
         paddingVertical: 20,
     },
+    link: {
+        ...Typography.headline,
+        color: iOSColors.blue,
+        paddingVertical: 10,
+    },
+    divider: {
+        backgroundColor: iOSColors.lightGray,
+        marginBottom: 5,
+        marginTop: 5
+    }
 });
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        establishments: state.establishmentsStore
+        establishments: state.establishmentsStore,
+        geocode: state.geocode
     };
 };
 
