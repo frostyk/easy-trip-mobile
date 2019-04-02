@@ -41,6 +41,7 @@ public class CacheConfiguration {
             cm.createCache(com.frostyk.domain.Tour.class.getName(), jcacheConfiguration);
             cm.createCache(com.frostyk.domain.Tour.class.getName() + ".images", jcacheConfiguration);
             cm.createCache(com.frostyk.domain.Tour.class.getName() + ".reviews", jcacheConfiguration);
+            cm.createCache(com.frostyk.domain.User.class.getName() + ".tours", jcacheConfiguration);
             cm.createCache(com.frostyk.domain.Image.class.getName(), jcacheConfiguration);
             cm.createCache(com.frostyk.domain.Review.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry

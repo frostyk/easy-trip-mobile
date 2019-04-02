@@ -85,6 +85,9 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Column(name = "reset_date")
     private Instant resetDate = null;
 
+    @Column(name = "has_premium")
+    private boolean hasPremium;
+
     @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
@@ -105,6 +108,14 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     public void setTours(Set<Tour> tours) {
         this.tours = tours;
+    }
+
+    public boolean isHasPremium() {
+        return hasPremium;
+    }
+
+    public void setHasPremium(boolean hasPremium) {
+        this.hasPremium = hasPremium;
     }
 
     public Long getId() {

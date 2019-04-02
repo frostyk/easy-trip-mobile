@@ -1,6 +1,7 @@
 package com.frostyk.web.rest;
 import com.frostyk.domain.Tour;
 import com.frostyk.repository.TourRepository;
+import com.frostyk.repository.UserRepository;
 import com.frostyk.web.rest.errors.BadRequestAlertException;
 import com.frostyk.web.rest.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
@@ -27,9 +28,11 @@ public class TourResource {
     private static final String ENTITY_NAME = "tour";
 
     private final TourRepository tourRepository;
+    private final UserRepository userRepository;
 
-    public TourResource(TourRepository tourRepository) {
+    public TourResource(TourRepository tourRepository, UserRepository userRepository) {
         this.tourRepository = tourRepository;
+        this.userRepository = userRepository;
     }
 
     /**
@@ -45,6 +48,7 @@ public class TourResource {
         if (tour.getId() != null) {
             throw new BadRequestAlertException("A new tour cannot already have an ID", ENTITY_NAME, "idexists");
         }
+        tour.setEasyTripUser(userRepository.findCurrent().get());
         Tour result = tourRepository.save(tour);
         return ResponseEntity.created(new URI("/api/tours/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))

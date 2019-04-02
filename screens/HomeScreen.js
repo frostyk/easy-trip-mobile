@@ -156,10 +156,10 @@ class HomeScreen extends React.Component {
                                   onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Theatres', THEATRES)}/>
                             <Divider style={styles.divider}/>
                             <List data={MUSEUMS} title={'Best Museums'}
-                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Museums', THEATRES)}/>
+                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Museums', MUSEUMS)}/>
                             <Divider style={styles.divider}/>
                             <List data={HOTELS} title={'Best Hotels'}
-                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Hotels', THEATRES)}/>
+                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Hotels', HOTELS)}/>
 
                         </View>
                     </ScrollView>
