@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58b6431e-fc73-4d97-bd26-14c19e5c3cf3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/redux/actions/CreateScreenAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/reducers/ChangeCreateScreenStateReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/CacheConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/CacheConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/TourResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/TourResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/.h2.server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/.h2.server.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/EasyTripUserResourceIntTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/ImageResourceIntTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/TourResourceIntTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/AppNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/AppNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/MainTabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/MainTabNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/types/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/types/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/ProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ProfileScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/SettingsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/CreateScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inputs.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Inputs.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,10 +37,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../Java/myn/src/main/java/com/myn/repository/UserRepository.java">
+        <entry file="file://$PROJECT_DIR$/screens/CreateScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="55" column="129" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="129" />
+            <state relative-caret-position="548">
+              <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,9 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/redux/reducers/ChangeHomeScreenStateReducer.js" />
-        <option value="$PROJECT_DIR$/redux/actions/HomeScreenAction.js" />
-        <option value="$PROJECT_DIR$/redux/actions/FetchCountriesAction.js" />
         <option value="$PROJECT_DIR$/redux/reducers/FetchPlacesReducer.js" />
         <option value="$PROJECT_DIR$/redux/reducers/GeocodeAddressReducer.js" />
         <option value="$PROJECT_DIR$/redux/reducers/FetchEstablishmentsReducer.js" />
@@ -140,28 +140,20 @@
         <option value="$PROJECT_DIR$/redux/actions/LogoutAction.js" />
         <option value="$PROJECT_DIR$/redux/reducers/LogoutReducer.js" />
         <option value="$PROJECT_DIR$/screens/AuthLoadingScreen.js" />
-        <option value="$PROJECT_DIR$/screens/SettingsScreen.js" />
         <option value="$PROJECT_DIR$/screens/SignInScreen.js" />
-        <option value="$PROJECT_DIR$/navigation/AppNavigator.js" />
         <option value="$PROJECT_DIR$/styles/Buttons.js" />
         <option value="$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js" />
         <option value="$PROJECT_DIR$/styles/Input.js" />
         <option value="$PROJECT_DIR$/navigation/AuthStack.js" />
         <option value="$PROJECT_DIR$/redux/reducers/LoginReducer.js" />
-        <option value="$PROJECT_DIR$/redux/actions/types/types.js" />
-        <option value="$PROJECT_DIR$/redux/actions/index.js" />
-        <option value="$PROJECT_DIR$/redux/reducers/index.js" />
         <option value="$PROJECT_DIR$/redux/reducers/RegisterReducer.js" />
         <option value="$PROJECT_DIR$/redux/actions/LoginAction.js" />
         <option value="$PROJECT_DIR$/redux/actions/RegisterAction.js" />
         <option value="$PROJECT_DIR$/constants/Server.js" />
         <option value="$PROJECT_DIR$/screens/LinksScreen.js" />
-        <option value="$PROJECT_DIR$/navigation/MainTabNavigator.js" />
         <option value="$PROJECT_DIR$/screens/auth/SignUpScreen.js" />
         <option value="$PROJECT_DIR$/styles/Typography.js" />
         <option value="$PROJECT_DIR$/components/Divider.js" />
-        <option value="$PROJECT_DIR$/screens/ProfileScreen.js" />
-        <option value="$PROJECT_DIR$/styles/Inputs.js" />
         <option value="$PROJECT_DIR$/screens/auth/SignInScreen.js" />
         <option value="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" />
         <option value="$PROJECT_DIR$/screens/EstablishmentDetailsScreen.js" />
@@ -170,6 +162,17 @@
         <option value="$PROJECT_DIR$/components/Autocomplete.js" />
         <option value="$PROJECT_DIR$/redux/actions/GeocodeAddressAction.js" />
         <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
+        <option value="$PROJECT_DIR$/navigation/AppNavigator.js" />
+        <option value="$PROJECT_DIR$/navigation/MainTabNavigator.js" />
+        <option value="$PROJECT_DIR$/screens/ProfileScreen.js" />
+        <option value="$PROJECT_DIR$/screens/SettingsScreen.js" />
+        <option value="$PROJECT_DIR$/styles/Inputs.js" />
+        <option value="$PROJECT_DIR$/redux/actions/types/types.js" />
+        <option value="$PROJECT_DIR$/redux/actions/CreateScreenAction.js" />
+        <option value="$PROJECT_DIR$/redux/actions/index.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/index.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/ChangeCreateScreenStateReducer.js" />
+        <option value="$PROJECT_DIR$/screens/CreateScreen.js" />
       </list>
     </option>
   </component>
@@ -194,52 +197,12 @@
             <path>
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
               <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="frostyk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="frostyk" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
@@ -256,12 +219,25 @@
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
               <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
               <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+              <item name="types" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
               <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
               <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
@@ -279,7 +255,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554221777047" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554283180276" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -287,9 +263,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/redux/reducers" />
       <recent name="$PROJECT_DIR$/redux/actions" />
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/screens/auth" />
       <recent name="$PROJECT_DIR$/styles" />
     </key>
@@ -333,7 +309,7 @@
       <workItem from="1554127623622" duration="29000" />
       <workItem from="1554127672122" duration="442000" />
       <workItem from="1554128735439" duration="869000" />
-      <workItem from="1554194079459" duration="10872000" />
+      <workItem from="1554194079459" duration="16672000" />
     </task>
     <task id="LOCAL-00001" summary="Added Authentication flow">
       <created>1552303927871</created>
@@ -398,12 +374,12 @@
       <option name="project" value="LOCAL" />
       <updated>1554205443124</updated>
     </task>
-    <task id="LOCAL-00010" summary="Implemented location tab">
-      <created>1550759308535</created>
+    <task id="LOCAL-00010" summary="Fixed backend">
+      <created>1554221810417</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1550759308535</updated>
+      <updated>1554221810417</updated>
     </task>
     <task id="LOCAL-00011" summary="Refactore code">
       <created>1552294646780</created>
@@ -412,11 +388,11 @@
       <option name="project" value="LOCAL" />
       <updated>1552294646780</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38215000" />
+    <option name="totallyTimeSpent" value="44015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="954" extended-state="6" />
@@ -517,7 +493,8 @@
     <MESSAGE value="Connected SignUp to the backend" />
     <MESSAGE value="Added Profile Tab" />
     <MESSAGE value="Fixed Home Screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Home Screen" />
+    <MESSAGE value="Fixed backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed backend" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -598,16 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/SettingsScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/Buttons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -622,20 +589,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/types/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -713,36 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/AppNavigator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/TabBarIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screens/auth/SignUpScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -770,47 +693,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/ProfileScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/HomeScreenAction.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/reducers/ChangeHomeScreenStateReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/Inputs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screens/auth/SignInScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
           <caret line="98" column="40" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/auth/WelcomeScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -884,16 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redux/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redux/reducers/GeocodeAddressReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -904,20 +780,138 @@
     <entry file="file://$PROJECT_DIR$/backend/target/classes/com/frostyk/repository/UserRepository.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../Java/myn/src/main/java/com/myn/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="55" column="129" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="158" column="95" selection-start-line="158" selection-start-column="81" selection-end-line="158" selection-end-column="95" />
+        <state relative-caret-position="276">
+          <caret line="146" column="41" selection-start-line="146" selection-start-column="41" selection-end-line="146" selection-end-column="41" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Java/myn/src/main/java/com/myn/repository/UserRepository.java">
+    <entry file="file://$PROJECT_DIR$/components/TabBarIcon.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="55" column="129" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="129" />
+        <state relative-caret-position="120">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/AppNavigator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/ProfileScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="67" column="6" lean-forward="true" selection-start-line="67" selection-start-column="6" selection-end-line="72" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/Inputs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/HomeScreenAction.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/reducers/ChangeHomeScreenStateReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/types/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/CreateScreenAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/reducers/ChangeCreateScreenStateReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/auth/WelcomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="113" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="23" selection-end-column="113" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/CreateScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
