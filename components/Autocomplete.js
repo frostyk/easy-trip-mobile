@@ -28,7 +28,7 @@ class Autocomplete extends React.Component {
             <View style={styles.container}>
                 <SearchBar
                     lightTheme={true}
-                    placeholder="Country..."
+                    placeholder="City. location ..."
                     onChangeText={this.updateSearch}
                     value={this.props.state.search}
                 />
