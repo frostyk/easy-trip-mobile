@@ -5,8 +5,6 @@ import com.frostyk.config.Constants;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.annotations.BatchSize;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 import javax.validation.constraints.Email;
 
 import javax.persistence.*;
@@ -25,7 +23,7 @@ import java.time.Instant;
  */
 @Entity
 @Table(name = "jhi_user")
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+
 public class User extends AbstractAuditingEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -62,7 +60,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     @NotNull
     @Column(nullable = false)
-    private boolean activated = true;
+    private boolean activated = false;
 
     @Size(min = 2, max = 6)
     @Column(name = "lang_key", length = 6)
@@ -85,38 +83,15 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Column(name = "reset_date")
     private Instant resetDate = null;
 
-    @Column(name = "has_premium")
-    private boolean hasPremium;
-
     @JsonIgnore
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     @JoinTable(
         name = "jhi_user_authority",
         joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
         inverseJoinColumns = {@JoinColumn(name = "authority_name", referencedColumnName = "name")})
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+
     @BatchSize(size = 20)
     private Set<Authority> authorities = new HashSet<>();
-
-    @OneToMany(mappedBy = "easyTripUser")
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<Tour> tours = new HashSet<>();
-
-    public Set<Tour> getTours() {
-        return tours;
-    }
-
-    public void setTours(Set<Tour> tours) {
-        this.tours = tours;
-    }
-
-    public boolean isHasPremium() {
-        return hasPremium;
-    }
-
-    public void setHasPremium(boolean hasPremium) {
-        this.hasPremium = hasPremium;
-    }
 
     public Long getId() {
         return id;

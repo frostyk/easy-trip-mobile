@@ -3,7 +3,6 @@ package com.frostyk.service.dto;
 import com.frostyk.config.Constants;
 
 import com.frostyk.domain.Authority;
-import com.frostyk.domain.Tour;
 import com.frostyk.domain.User;
 
 import javax.validation.constraints.Email;
@@ -11,7 +10,6 @@ import javax.validation.constraints.NotBlank;
 
 import javax.validation.constraints.*;
 import java.time.Instant;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -55,10 +53,6 @@ public class UserDTO {
 
     private Set<String> authorities;
 
-    private Set<Tour> tours;
-
-    private boolean hasPremium;
-
     public UserDTO() {
         // Empty constructor needed for Jackson.
     }
@@ -79,24 +73,6 @@ public class UserDTO {
         this.authorities = user.getAuthorities().stream()
             .map(Authority::getName)
             .collect(Collectors.toSet());
-        this.tours = user.getTours();
-        this.hasPremium = user.isHasPremium();
-    }
-
-    public Set<Tour> getTours() {
-        return tours;
-    }
-
-    public void setTours(Set<Tour> tours) {
-        this.tours = tours;
-    }
-
-    public boolean isHasPremium() {
-        return hasPremium;
-    }
-
-    public void setHasPremium(boolean hasPremium) {
-        this.hasPremium = hasPremium;
     }
 
     public Long getId() {

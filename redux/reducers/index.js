@@ -12,6 +12,7 @@ import {loginReducer} from "./LoginReducer";
 import {logoutReducer} from "./LogoutReducer";
 import {registerReducer} from "./RegisterReducer";
 import {changeCreateScreenReducer} from "./ChangeCreateScreenStateReducer";
+import {createTourReducer} from "./CreateTourReducer";
 
 export default combineReducers({
     countries: fetchCountriesReducer,
@@ -27,4 +28,5 @@ export default combineReducers({
     logoutState: logoutReducer,
     registerState: registerReducer,
     createScreenState: changeCreateScreenReducer,
+    createTourState: createTourReducer
 });

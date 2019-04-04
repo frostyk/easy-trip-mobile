@@ -40,10 +40,9 @@ spring:
         properties:
             hibernate.id.new_generator_mappings: true
             hibernate.connection.provider_disables_autocommit: true
-            hibernate.cache.use_second_level_cache: true
+            hibernate.cache.use_second_level_cache: false
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: true
-            hibernate.cache.region.factory_class: io.github.jhipster.config.jcache.BeanClassLoaderAwareJCacheRegionFactory
     liquibase:
         contexts: prod
     mail:
@@ -91,10 +90,6 @@ jhipster:
         version: V_1_1 # To use HTTP/2 you will need SSL support (see above the "server.ssl" configuration)
         cache: # Used by the CachingHttpHeadersFilter
             timeToLiveInDays: 1461
-    cache: # Cache configuration
-        ehcache: # Ehcache configuration
-            time-to-live-seconds: 3600 # By default objects stay 1 hour in the cache
-            max-entries: 1000 # Number of objects in each cache entry
     security:
         authentication:
             jwt:
@@ -103,7 +98,7 @@ jhipster:
                 # - In the JHipster Registry (which includes a Spring Cloud Config server)
                 # - In a separate `application-prod.yml` file, in the same folder as your executable WAR file
                 # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-                base64-secret: NTQwMTQ4NmE0MTk1ODcyMDg2YTI5NWU2M2Q4YzU5ZTA5MWMxZDI5YWQwNzY1Yjg4NjY5ZDJkNzIyMzQxOTgyOWM5ZjNjMTU0N2JlYzViOWIxM2FkNjhlYTk2MjQ3ZWRjZmU5Y2RiOTQzYTY4NWQzZTMxNDQ5MGMxZjY3NjZiYmU=
+                base64-secret: NzFkN2E4MjM4ZTVkOTQyN2NiYzg5N2JlMzc3ODliY2MxMDA0ZjI2NTRkZGZjZTY0ZGUxZjk2ZGJhYTZjNmJkODFhZGNlYzRkM2ZhOWExODdhMzE0MDU1NzFhMjgyMmIzZGNlMDY3MWY0ODQwNWYwZDBlNDM3YzQ1ZWM3ZTcyNGY=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000

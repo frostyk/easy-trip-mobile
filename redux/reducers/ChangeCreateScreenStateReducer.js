@@ -3,6 +3,9 @@ import {CHANGE_CREATE_SCREEN_STATE} from "../actions/types/types";
 const initialState = {
     title: '',
     description: '',
+    price: 0,
+    duration: 0,
+    placeId: '',
     location: '',
     images: [],
     screenState: 1,

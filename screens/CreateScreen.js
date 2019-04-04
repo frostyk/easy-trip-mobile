@@ -10,6 +10,7 @@ import {iOSColors} from "react-native-typography";
 import {heightPercentageToDP as hp, widthPercentageToDP as wp} from "react-native-responsive-screen";
 import {ImagePicker, MapView, Permissions} from 'expo';
 import Buttons from "../styles/Buttons";
+import {_} from "lodash"
 
 class CreateScreen extends React.Component {
     static navigationOptions = {
@@ -22,8 +23,7 @@ class CreateScreen extends React.Component {
     };
 
     _pickLocation = location => {
-        console.log(location);
-        this.props.changeCreateScreenState({locationsListVisible: false, location: location.description})
+        this.props.changeCreateScreenState({locationsListVisible: false, location: location.description, placeId: location.place_id});
         this.props.geocodeAddressByPlaceIdForTour(location.place_id, this.map);
     };
 
@@ -60,9 +60,13 @@ class CreateScreen extends React.Component {
     };
 
     _createTour = () => {
-        const tour = {};
-        console.log(tour);
-    }
+        const tour = _.pick(this.props.state, ['title', 'description', 'price', 'duration', 'placeId', 'images']);
+        this.props.createTour(tour);
+    };
+
+    _changeState = (state) => {
+        this.props.changeCreateScreenState(state);
+    };
 
     renderMap = () => {
         const {coords} = this.props.state;
@@ -107,6 +111,7 @@ class CreateScreen extends React.Component {
                             inputStyle={[Inputs.rounded.inputStyle, {width: wp('90%')}]}
                             placeholder={'Enter your title'}
                             label={'Title'}
+                            onChangeText={(title) => this._changeState({title})}
                             labelStyle={Inputs.rounded.labelStyle}
                         />
                         <Input
@@ -114,6 +119,7 @@ class CreateScreen extends React.Component {
                             inputStyle={Inputs.rounded.inputStyle}
                             placeholder={'Enter your description'}
                             label={'Description'}
+                            onChangeText={(description) => this._changeState({description})}
                             labelStyle={Inputs.rounded.labelStyle}
                         />
                         <Input
@@ -121,6 +127,7 @@ class CreateScreen extends React.Component {
                             inputStyle={[Inputs.rounded.inputStyle]}
                             placeholder={'Enter tour price'}
                             label={'Price'}
+                            onChangeText={(price) => this._changeState({price})}
                             labelStyle={Inputs.rounded.labelStyle}
                             leftIcon={
                                 <Icon
@@ -137,6 +144,7 @@ class CreateScreen extends React.Component {
                             inputStyle={[Inputs.rounded.inputStyle]}
                             placeholder={'Enter tour duration in minutes'}
                             label={'Duration'}
+                            onChangeText={(duration) => this._changeState({duration})}
                             labelStyle={Inputs.rounded.labelStyle}
                             leftIcon={
                                 <Icon

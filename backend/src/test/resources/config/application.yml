@@ -17,8 +17,6 @@
 spring:
     application:
         name: backend
-    cache:
-        type: simple
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:h2:mem:backend;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
@@ -87,7 +85,7 @@ jhipster:
         authentication:
             jwt:
                 # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-                base64-secret: NTQwMTQ4NmE0MTk1ODcyMDg2YTI5NWU2M2Q4YzU5ZTA5MWMxZDI5YWQwNzY1Yjg4NjY5ZDJkNzIyMzQxOTgyOWM5ZjNjMTU0N2JlYzViOWIxM2FkNjhlYTk2MjQ3ZWRjZmU5Y2RiOTQzYTY4NWQzZTMxNDQ5MGMxZjY3NjZiYmU=
+                base64-secret: NzFkN2E4MjM4ZTVkOTQyN2NiYzg5N2JlMzc3ODliY2MxMDA0ZjI2NTRkZGZjZTY0ZGUxZjk2ZGJhYTZjNmJkODFhZGNlYzRkM2ZhOWExODdhMzE0MDU1NzFhMjgyMmIzZGNlMDY3MWY0ODQwNWYwZDBlNDM3YzQ1ZWM3ZTcyNGY=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics:
