@@ -2,30 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58b6431e-fc73-4d97-bd26-14c19e5c3cf3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/Tour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/ImageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/TourRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/TourService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/dto/ImageDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/dto/TourDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/mapper/EntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/mapper/ImageMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/mapper/TourMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/actions/CreateTourAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/reducers/CreateTourReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/TourResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/Tour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/TourRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/TourRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/TourResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/TourResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/.h2.server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/.h2.server.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/config/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/config/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actions/types/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/types/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/reducers/ChangeCreateScreenStateReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/ChangeCreateScreenStateReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/CreateScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/CreateScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/CreateTourAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/CreateTourAction.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,12 +37,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/redux/actions/CreateTourAction.js">
+        <entry file="file://$PROJECT_DIR$/screens/CreateScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="89">
+              <caret line="62" column="110" selection-start-line="62" selection-start-column="110" selection-end-line="62" selection-end-column="110" />
               <folding>
-                <element signature="e#0#92#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,8 +171,8 @@
         <option value="$PROJECT_DIR$/redux/actions/FetchCountriesAction.js" />
         <option value="$PROJECT_DIR$/redux/actions/index.js" />
         <option value="$PROJECT_DIR$/redux/reducers/CreateTourReducer.js" />
-        <option value="$PROJECT_DIR$/redux/actions/CreateTourAction.js" />
         <option value="$PROJECT_DIR$/redux/reducers/index.js" />
+        <option value="$PROJECT_DIR$/redux/actions/CreateTourAction.js" />
         <option value="$PROJECT_DIR$/screens/CreateScreen.js" />
       </list>
     </option>
@@ -342,7 +329,7 @@
       <workItem from="1554127672122" duration="442000" />
       <workItem from="1554128735439" duration="869000" />
       <workItem from="1554194079459" duration="23680000" />
-      <workItem from="1554392915400" duration="794000" />
+      <workItem from="1554392915400" duration="3401000" />
     </task>
     <task id="LOCAL-00001" summary="Added Authentication flow">
       <created>1552303927871</created>
@@ -432,7 +419,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51817000" />
+    <option name="totallyTimeSpent" value="54424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="956" extended-state="6" />
@@ -943,22 +930,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/CreateScreen.js">
+    <entry file="file://$PROJECT_DIR$/redux/actions/CreateTourAction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="63" column="29" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="29" />
+        <state relative-caret-position="190">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/CreateTourAction.js">
+    <entry file="file://$PROJECT_DIR$/screens/CreateScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="89">
+          <caret line="62" column="110" selection-start-line="62" selection-start-column="110" selection-end-line="62" selection-end-column="110" />
           <folding>
-            <element signature="e#0#92#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

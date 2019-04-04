@@ -23,7 +23,7 @@ const createTourFailure = (err) => {
 };
 
 const create = async (tour) => {
-    return axios.post(`${SERVER_URL}/api/tours`, tour);
+    return axios.post(`${SERVER_URL}/api/tour`, tour);
 };
 
 
