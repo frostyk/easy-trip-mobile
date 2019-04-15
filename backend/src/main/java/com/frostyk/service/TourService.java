@@ -4,8 +4,13 @@ import com.frostyk.domain.Image;
 import com.frostyk.domain.Tour;
 import com.frostyk.repository.ImageRepository;
 import com.frostyk.repository.TourRepository;
+import com.frostyk.service.dto.TourDTO;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,9 +32,13 @@ public class TourService {
         t.getImages().forEach(i -> i.setTour(finalT));
         t.setImages(t.getImages().stream().map(imageRepository::save).collect(Collectors.toList()));
         t.setUser(userService.getUserWithAuthorities().get());
+        t.setCreatedAt(Instant.now());
         t = tourRepository.save(t);
         return t;
     }
 
 
+    public Page<TourDTO> getServicesByPlaceID(String placeId) {
+        return tourRepository.findAllByPlaceId(placeId, new PageRequest(0, 20, Sort.by("createdAt"))).map(TourDTO::new);
+    }
 }

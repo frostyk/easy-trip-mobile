@@ -1,5 +1,5 @@
 import {ADD_ESTABLISHMENTS, CLEAN_ESTABLISHMENTS, DELETE_ESTABLISHMENT} from "../actions/types/types";
-import {CAFE, MUSEUM, NIGHT_CLUB, PARK, RESTAURANT, ZOO} from "../../constants/Google";
+import {CAFE, MUSEUM, NIGHT_CLUB, PARK, RESTAURANT, TOUR, ZOO} from "../../constants/Google";
 
 const initialState = {
     restaurants: [],
@@ -8,6 +8,7 @@ const initialState = {
     zoos: [],
     cafes: [],
     parks: [],
+    tours: [],
     establishments: []
 };
 
@@ -44,6 +45,11 @@ export const manageEstablishmentsReducer = (state = initialState, action) => {
                   return {
                       ...state,
                       parks: [...state.cafes, ...action.payload.establishments]
+                  };
+              case TOUR:
+                  return {
+                      ...state,
+                      tours: [...state.tours, ...action.payload.establishments]
                   };
               default:
                   return {

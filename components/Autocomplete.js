@@ -21,6 +21,7 @@ class Autocomplete extends React.Component {
         testedTypes.forEach(type => {
             this.props.geocodeAddressByPlaceIdAndFindPlaces(item.place_id, type, 1500);
         });
+        this.props.fetchTours(item.place_id);
     };
 
     render() {

@@ -1,6 +1,7 @@
 package com.frostyk.domain;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,6 +22,10 @@ public class Tour {
     @Column
     private Long duration;
 
+
+    @Column(length = 1024)
+    private String placeId;
+
     @Column
     private Long price;
 
@@ -28,8 +33,27 @@ public class Tour {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "tour", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "tour", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Image> images;
+
+    @Column
+    private Instant createdAt;
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Instant createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getPlaceId() {
+        return placeId;
+    }
+
+    public void setPlaceId(String placeId) {
+        this.placeId = placeId;
+    }
 
     public Long getId() {
         return id;

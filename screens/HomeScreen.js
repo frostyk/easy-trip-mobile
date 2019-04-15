@@ -222,6 +222,7 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state, ownProps) => {
+    console.log(state.establishmentsStore);
     return {
         establishments: state.establishmentsStore,
         geocode: state.geocode
