@@ -116,8 +116,19 @@ class HomeScreen extends React.Component {
         });
     };
 
+    mapTours = (establishments) => {
+        return establishments.map(item => {
+            return {
+                img: item.images[0],
+                name: item.title,
+                vicinity: item.placeId
+            }
+        });
+    }
+
     render() {
         const {establishments} = this.props;
+        const tours = this.mapTours(establishments.tours);
         // const restaurants = this.parseEstablishments(establishments.restaurants); //TODO uncomment for real data
         const city = this.props.geocode.results.length > 0 ? this.props.geocode.results[0].formatted_address : 'City';
         return (
@@ -149,8 +160,11 @@ class HomeScreen extends React.Component {
                                 </TouchableOpacity>
                             </View>
                             <Divider style={styles.divider}/>
+                            <List data={tours} title={'Best Tours'}
+                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Tours', tours)}/>
+                            <Divider style={styles.divider}/>
                             <List data={RESTAURANTS} title={'Best Restaurants'}
-                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Restaurants', RESTAURANTS)}/>
+                                onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Restaurants', RESTAURANTS)}/>
                             <Divider style={styles.divider}/>
                             <List data={THEATRES} title={'Best Theatres'}
                                   onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Theatres', THEATRES)}/>
