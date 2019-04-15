@@ -5,7 +5,7 @@ import Autocomplete from "../components/Autocomplete";
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 import Typography from "../styles/Typography";
-import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
+import {widthPercentageToDP} from "react-native-responsive-screen";
 import {iOSColors} from "react-native-typography";
 import {List} from "../components/List";
 import {GOOGLE_API_KEY} from "../constants/Google";
@@ -159,12 +159,15 @@ class HomeScreen extends React.Component {
                                     <Text style={styles.link}>Navigate</Text>
                                 </TouchableOpacity>
                             </View>
-                            <Divider style={styles.divider}/>
-                            <List data={tours} title={'Best Tours'}
-                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Tours', tours)}/>
+                            {tours.length > 0 &&
+                            <View>
+                                <Divider style={styles.divider}/>
+                                <List data={tours} title={'Best Tours'}
+                                      onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Tours', tours)}/>
+                            </View>}
                             <Divider style={styles.divider}/>
                             <List data={RESTAURANTS} title={'Best Restaurants'}
-                                onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Restaurants', RESTAURANTS)}/>
+                                  onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Restaurants', RESTAURANTS)}/>
                             <Divider style={styles.divider}/>
                             <List data={THEATRES} title={'Best Theatres'}
                                   onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Theatres', THEATRES)}/>

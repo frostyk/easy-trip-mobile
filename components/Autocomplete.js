@@ -1,15 +1,17 @@
 import React from 'react';
-import {Divider, ListItem, SearchBar} from "react-native-elements";
-import {Platform, StyleSheet, View, ScrollView} from "react-native";
+import {Divider, Icon, Input, ListItem, SearchBar} from "react-native-elements";
+import {Platform, StyleSheet, View, ScrollView, Text} from "react-native";
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
-import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
+import {heightPercentageToDP, widthPercentageToDP as wp} from "react-native-responsive-screen";
 import {CAFE, MUSEUM, NIGHT_CLUB, PARK, RESTAURANT, ZOO} from "../constants/Google";
+import Inputs from "../styles/Inputs";
+import {iOSColors} from "react-native-typography";
 
 class Autocomplete extends React.Component {
 
 
-    updateSearch = search => {
+    _updateSearch = search => {
         this.props.changeHomeScreenState({search});
         this.props.fetchPlaces(search);
     };
@@ -27,18 +29,32 @@ class Autocomplete extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <SearchBar
-                    lightTheme={true}
-                    placeholder="City. location ..."
-                    onChangeText={this.updateSearch}
-                    value={this.props.state.search}
+                <Input
+                    inputContainerStyle={[Inputs.rounded.inputContainerStyle, {paddingLeft: 0, marginBottom: 0}]}
+                    inputStyle={[Inputs.rounded.inputStyle, {width: wp('95%')}]}
+                    placeholder={'Start typing your location'}
+                    onChangeText={this._updateSearch}
+                    value={this.props.state.location}
+                    leftIcon={
+                        <Icon
+                            name='navigation'
+                            color={iOSColors.pink}
+                            raised
+                            size={14}
+                        />
+                    }
                 />
                 <ScrollView >
                     {
                         this.props.places.map((item, i) => (
                             <ListItem
                                 key={i}
-                                title={item.description}
+                                containerStyle={styles.locationList}
+                                title={
+
+                                    <Text style={Inputs.rounded.labelStyle}> {item.description}</Text>
+
+                                }
                                 onPress={(e) => this.onItemPress(item)}
                             />
                         ))
@@ -54,11 +70,15 @@ const styles = StyleSheet.create({
     container: {
         position: 'absolute',
         flex: 1,
-        width: widthPercentageToDP('100%'),
+        width: wp('100%'),
         zIndex: 100
     },
     listStyle: {
         borderBottomWidth: 1
+    },
+    locationList: {
+        borderRightWidth: 1,
+        borderLeftWidth: 1,
     }
 });
 
