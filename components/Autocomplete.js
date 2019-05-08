@@ -71,7 +71,9 @@ const styles = StyleSheet.create({
         position: 'absolute',
         flex: 1,
         width: wp('100%'),
-        zIndex: 100
+        zIndex: 100,
+        backgroundColor: '#fff',
+        paddingBottom: 10
     },
     listStyle: {
         borderBottomWidth: 1

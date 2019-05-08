@@ -60,6 +60,6 @@ PostStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  ProfileStack,
   PostStack,
+  ProfileStack
 });
