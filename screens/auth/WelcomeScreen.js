@@ -4,6 +4,7 @@ import {Button, Text} from "react-native-elements";
 import Typography from '../../styles/Typography'
 import Buttons from '../../styles/Buttons'
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
+import {iOSColors} from "react-native-typography";
 
 export default class WelcomeScreen extends React.Component {
     static navigationOptions = {
@@ -19,7 +20,7 @@ export default class WelcomeScreen extends React.Component {
                         <Button title={'Log In'} type={'outline'} titleStyle={Buttons.rounded.title}
                                 onPress={this._onSignInPress}
                                 buttonStyle={[Buttons.rounded.outlineStyle, {width: widthPercentageToDP('75%')}]}/>
-                        <Button title={'Sign Up'} titleStyle={Buttons.rounded.title}
+                        <Button title={'Sign Up'} titleStyle={[Buttons.rounded.title, {color: iOSColors.white}]}
                                 onPress={this._onSignUpPress}
                                 buttonStyle={[Buttons.rounded.solidStyle, {width: widthPercentageToDP('75%')}]}/>
                     </View>

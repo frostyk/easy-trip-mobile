@@ -4,7 +4,6 @@ import axios from "axios";
 export const BEARER_KEY = "auth-key";
 
 export const onSignIn = (key) => {
-    console.log(`Sign int with key ${key}`);
     axios.defaults.headers.common['Authorization'] = `Bearer ${key}`;
     return AsyncStorage.setItem(BEARER_KEY, JSON.stringify(key));
 };

@@ -8,11 +8,13 @@ import ProfileScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/CreateScreen';
 import EstablishmentsScreen from "../screens/EstablishmentsScreen";
 import EstablishmentDetailsScreen from '../screens/EstablishmentDetailsScreen'
+import TourDetailsScreen from "../screens/TourDetailsScreen";
 
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
   EstablishmentDetails: EstablishmentDetailsScreen,
+  TourDetails: TourDetailsScreen,
   Establishments: EstablishmentsScreen
 });
 

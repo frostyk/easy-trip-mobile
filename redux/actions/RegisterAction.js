@@ -36,7 +36,6 @@ const fetchRegister = (user) => {
 };
 
 export const register = (user) => {
-    console.log(user);
     return (dispatch) => {
         dispatch(registerRequest());
         fetchRegister(user)

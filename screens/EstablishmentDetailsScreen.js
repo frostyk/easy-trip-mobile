@@ -158,6 +158,7 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state, ownProps) => {
+    console.log(state.establishmentDetailsScreenState)
     return {
         state: state.establishmentDetailsScreenState
     };

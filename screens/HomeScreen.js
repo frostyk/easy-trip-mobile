@@ -8,13 +8,31 @@ import Typography from "../styles/Typography";
 import {widthPercentageToDP} from "react-native-responsive-screen";
 import {iOSColors} from "react-native-typography";
 import {List} from "../components/List";
-import {GOOGLE_API_KEY} from "../constants/Google";
+import {ESTABLISHMENT, GOOGLE_API_KEY, TOUR} from "../constants/Google";
+
+const Tours = [
+    {
+        images: ['https://dummyimage.com/600x400/000/eee&text=Tour+1'],
+        title: 'Tour 1',
+        vicinity: 'Address',
+    },
+    {
+        images: ['https://dummyimage.com/600x400/000/fff&text=Tour+2'],
+        title: 'Tour 2',
+        vicinity: 'Address'
+    },
+    {
+        images: ['https://dummyimage.com/600x400/000/fff&text=Tour+3'],
+        title: 'Tour 3',
+        vicinity: 'Address'
+    },
+];
 
 const RESTAURANTS = [
     {
         img: 'https://dummyimage.com/600x400/000/fff&text=Res+1',
         name: 'Place 1',
-        vicinity: 'Vcinity'
+        vicinity: 'Vcinity',
     },
     {
         img: 'https://dummyimage.com/600x400/000/fff&text=Res+2',
@@ -111,7 +129,9 @@ class HomeScreen extends React.Component {
             return {
                 img: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`,
                 name: item.name,
-                vicinity: item.vicinity
+                place_id: item.place_id,
+                vicinity: item.vicinity,
+                type: ESTABLISHMENT
             }
         });
     };
@@ -121,15 +141,16 @@ class HomeScreen extends React.Component {
             return {
                 img: item.images[0],
                 name: item.title,
-                vicinity: item.placeId
+                vicinity: item.placeId,
+                type: TOUR
             }
         });
     }
 
     render() {
         const {establishments} = this.props;
-        const tours = this.mapTours(establishments.tours);
-        // const restaurants = this.parseEstablishments(establishments.restaurants); //TODO uncomment for real data
+        const tours = this.mapTours(Tours);
+        //const restaurants = this.parseEstablishments(establishments.restaurants); //TODO uncomment for real data
         const city = this.props.geocode.results.length > 0 ? this.props.geocode.results[0].formatted_address : 'City';
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
@@ -239,7 +260,6 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state.establishmentsStore);
     return {
         establishments: state.establishmentsStore,
         geocode: state.geocode

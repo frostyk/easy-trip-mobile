@@ -3,7 +3,7 @@ import {human, iOSColors, systemWeights} from 'react-native-typography'
 export default {
     h1: {
         ...human.largeTitleObject,
-        color: iOSColors.green,
+        color: iOSColors.pink,
         ...systemWeights.bold
     },
     title: {
@@ -17,5 +17,8 @@ export default {
     },
     headline: {
         ...human.headlineObject
+    },
+    subhead: {
+        ...human.subheadObject
     },
 }

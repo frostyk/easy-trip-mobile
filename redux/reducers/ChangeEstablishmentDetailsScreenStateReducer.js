@@ -2,6 +2,7 @@ import {CHANGE_ESTABLISHMENT_DETAILS_SCREEN_STATE} from "../actions/types/types"
 
 const initialState = {
     establishment: null,
+    tour: null,
     selectedIndex: 1
 };
 

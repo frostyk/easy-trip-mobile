@@ -3,7 +3,7 @@ import {ScrollView, StyleSheet, Text} from 'react-native';
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 import {Button, Card, Icon} from "react-native-elements";
-import {GOOGLE_API_KEY} from "../constants/Google";
+import {ESTABLISHMENT} from "../constants/Google";
 
 class EstablishmentsScreen extends React.Component {
     static navigationOptions = ({navigation}) => {
@@ -25,11 +25,7 @@ class EstablishmentsScreen extends React.Component {
                     establishments.map((item, index) => (
                         <Card
                             key={index}
-                            title={item.name}
                             image={{uri: item.img}}>
-                            <Text style={{marginBottom: 10}}>
-                                {item.vicinity}
-                            </Text>
                             <Button
                                 icon={<Icon name='code' color='#ffffff'/>}
                                 backgroundColor='#03A9F4'
@@ -44,8 +40,13 @@ class EstablishmentsScreen extends React.Component {
     }
 
     viewDetails = (item) => {
-        this.props.fetchEstablishmentDetails(item.place_id);
-        this.props.navigation.navigate('EstablishmentDetails');
+        if (item.type === ESTABLISHMENT) {
+            this.props.fetchEstablishmentDetails(item.place_id);
+            this.props.navigation.navigate('EstablishmentDetails');
+        } else {
+            this.props.changeEstablishmentDetailsScreenState({tour: item});
+            this.props.navigation.navigate('TourDetails');
+        }
     }
 }
 

@@ -30,7 +30,6 @@ const fetch = async (placeID) => {
 
 
 export const fetchTours = (placeId) => {
-    console.log('Fetch tours by placeId ' + placeId);
     return async (dispatch) => {
         dispatch(fetchToursRequest());
         try {

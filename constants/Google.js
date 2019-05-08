@@ -8,3 +8,7 @@ export const ZOO = 'zoo';
 export const NIGHT_CLUB = 'night_club';
 export const MUSEUM = 'museum';
 export const RESTAURANT = 'restaurant';
+
+
+
+export const ESTABLISHMENT = 'establishment';

@@ -8,6 +8,7 @@ import Typography from '../../styles/Typography'
 import Inputs from '../../styles/Inputs'
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
 import Buttons from "../../styles/Buttons";
+import {iOSColors} from "react-native-typography";
 
 class SignInScreen extends React.Component {
     static navigationOptions = {
@@ -47,7 +48,7 @@ class SignInScreen extends React.Component {
 
                             />
 
-                            <Button title={'Log In'} titleStyle={Buttons.rounded.title}
+                            <Button title={'Log In'} titleStyle={[Buttons.rounded.title, {color: iOSColors.white}]}
                                     onPress={this._onSignInPress}
                                     buttonStyle={[Buttons.rounded.solidStyle, {width: widthPercentageToDP('60%')}]}/>
                         </View>

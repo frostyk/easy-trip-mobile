@@ -8,6 +8,7 @@ import Typography from '../../styles/Typography'
 import Inputs from '../../styles/Inputs'
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
 import Buttons from "../../styles/Buttons";
+import {iOSColors} from "react-native-typography";
 
 class SignUpScreen extends React.Component {
     static navigationOptions = {
@@ -70,7 +71,7 @@ class SignUpScreen extends React.Component {
                                 autoCapitalize={'none'}
                             />
 
-                            <Button title={'Sign Up'}  titleStyle={Buttons.rounded.title}
+                            <Button title={'Sign Up'}  titleStyle={[Buttons.rounded.title, {color: iOSColors.white}]}
                                     onPress={this._onSignUpPress}
                                     buttonStyle={[Buttons.rounded.solidStyle, {width: widthPercentageToDP('60%')}]}/>
                         </View>
@@ -93,7 +94,6 @@ class SignUpScreen extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state);
     return {
         registerState: state.loginState
     };

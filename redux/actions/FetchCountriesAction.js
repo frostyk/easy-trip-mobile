@@ -30,7 +30,6 @@ const fetch = (name) => {
 };
 
 export const fetchCountries = (name) => {
-    console.log(name);
     return (dispatch) => {
         dispatch(fetchCountriesRequest());
         if (name.length < 3) {
