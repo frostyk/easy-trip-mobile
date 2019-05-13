@@ -7,6 +7,7 @@ import {iOSColors} from 'react-native-typography'
 import {SectionDivider} from "../components/Divider";
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
+import firebase from 'firebase'
 
 class ProfileScreen extends React.Component {
     static navigationOptions = {
@@ -14,13 +15,7 @@ class ProfileScreen extends React.Component {
     };
 
     _logoutAsync = () => {
-        this.props.logout();
-    }
-
-    componentDidUpdate() {
-        if (this.props.logoutState.isSuccessful) {
-            this.props.navigation.navigate('AuthLoading');
-        }
+        firebase.auth().signOut();
     }
 
     render() {

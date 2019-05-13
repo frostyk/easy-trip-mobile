@@ -38,20 +38,31 @@ class SignInScreen extends React.Component {
                 );
                 // Sign in with credential from the Google user.
                 firebase.auth().signInWithCredential(credential).then(function (result) {
-                    firebase
-                        .database()
-                        .ref(`/users/${result.user.uid}`)
-                        .set({
-                            gmail: result.user.email,
-                            profile_picture: result.additionalUserInfo.profile.picture,
-                            locale: result.additionalUserInfo.profile.locale,
-                            first_name: result.additionalUserInfo.profile.given_name,
-                            family_name: result.additionalUserInfo.profile.family_name
-                        }).then((snapshot) => {
+                    if (result.additionalUserInfo.isNewUser) {
+                        firebase
+                            .database()
+                            .ref(`/users/${result.user.uid}`)
+                            .set({
+                                gmail: result.user.email,
+                                profile_picture: result.additionalUserInfo.profile.picture,
+                                locale: result.additionalUserInfo.profile.locale,
+                                first_name: result.additionalUserInfo.profile.given_name,
+                                family_name: result.additionalUserInfo.profile.family_name,
+                                created_at: Date.now()
+                            }).then((snapshot) => {
                             this.props.googleLogin()
-                    }).catch(err => {
-                        console.log(err);
-                    })
+                        }).catch(err => {
+                            console.log(err);
+                        })
+                    } else {
+                        firebase
+                            .database()
+                            .ref(`/users/${result.user.uid}`)
+                            .update({
+                                last_logged_in: Date.now()
+                            })
+                    }
+
 
                 }.bind(this)).catch(function(error) {
                     // Handle Errors here.
