@@ -1,5 +1,6 @@
 import {AsyncStorage} from "react-native";
 import axios from "axios";
+import firebase from 'firebase'
 
 export const BEARER_KEY = "auth-key";
 
@@ -12,14 +13,4 @@ export const onSignIn = (key) => {
 export const onSignOut = async () => {
     axios.defaults.headers.common['Authorization'] = ``;
     return AsyncStorage.removeItem(BEARER_KEY)
-};
-
-export const isSignedIn = async () => {
-    try {
-        const token = await AsyncStorage.getItem(BEARER_KEY);
-        const parsedToken = JSON.parse(token);
-        return parsedToken !== null;
-    } catch (e) {
-        console.log(e);
-    }
 };

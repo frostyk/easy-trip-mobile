@@ -28,28 +28,11 @@ const loginReset = () => {
     }
 };
 
-const fetchLogin = (user) => {
-    return axios.post(`${SERVER_URL}/api/authenticate`, user);
-};
 
-export const login = (user) => {
+
+export const googleLogin = () => {
     return (dispatch) => {
-        dispatch(loginRequest());
-        fetchLogin(user)
-            .then(async res => {
-                if (res.data.id_token) {
-                    try {
-                        await onSignIn(res.data.id_token);
-                        dispatch(loginSuccess());
-                        dispatch(loginReset());
-                    } catch (e) {
-                        dispatch(loginFailure(e))
-                    }
-                }
-            })
-            .catch(err => {
-                dispatch(loginFailure(err))
-            })
+        dispatch(loginSuccess())
     }
 };
 

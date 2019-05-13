@@ -2,24 +2,167 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58b6431e-fc73-4d97-bd26-14c19e5c3cf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/screens/TourDetailsScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/Google.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/Google.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/MainTabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/MainTabNavigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actions/FetchCountriesAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/FetchCountriesAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actions/FetchToursAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/FetchToursAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actions/RegisterAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/RegisterAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actions/types/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/types/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/reducers/ChangeEstablishmentDetailsScreenStateReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/ChangeEstablishmentDetailsScreenStateReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/EstablishmentDetailsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/EstablishmentDetailsScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/EstablishmentsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/EstablishmentsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.prettierignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.yo-rc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/docker.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/profile_dev.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/profile_prod.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/sonar.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/zipkin.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/docker/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/docker/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/docker/app.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/docker/entrypoint.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/docker/postgresql.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/docker/sonar.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/ApplicationWebXml.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/BackendApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/aop/logging/LoggingAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/ApplicationProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/AsyncConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/CloudDatabaseConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/DatabaseConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/DateTimeFormatConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/DefaultProfileUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/JacksonConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/LiquibaseConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/LocaleConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/LoggingAspectConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/LoggingConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/SecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/WebConfigurer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/audit/AuditEventConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/audit/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/config/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/AbstractAuditingEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/Authority.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/Image.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/PersistentAuditEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/Tour.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/domain/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/AuthorityRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/CustomAuditEventRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/ImageRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/PersistenceAuditEventRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/TourRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/repository/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/security/AuthoritiesConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/security/DomainUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/security/SecurityUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/security/SpringSecurityAuditorAware.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/security/UserNotActivatedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/security/jwt/JWTConfigurer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/security/jwt/JWTFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/security/jwt/TokenProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/security/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/AuditEventService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/MailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/TourService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/dto/PasswordChangeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/dto/TourDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/dto/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/dto/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/mapper/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/service/util/RandomUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/AccountResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/AuditResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/LogsResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/TourResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/UserJWTController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/UserResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/errors/BadRequestAlertException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/errors/CustomParameterizedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/errors/EmailAlreadyUsedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/errors/EmailNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/errors/ErrorConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/errors/ExceptionTranslator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/errors/FieldErrorVM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/errors/InternalServerErrorException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/errors/InvalidPasswordException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/errors/LoginAlreadyUsedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/errors/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/util/HeaderUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/util/PaginationUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/vm/KeyAndPasswordVM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/vm/LoggerVM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/vm/LoginVM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/vm/ManagedUserVM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/frostyk/web/rest/vm/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/jib/entrypoint.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/application-prod.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/application-tls.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/liquibase/authorities.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/liquibase/changelog/00000000000000_initial_schema.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/liquibase/master.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/liquibase/users.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/liquibase/users_authorities.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/i18n/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/templates/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/templates/mail/activationEmail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/templates/mail/creationEmail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/templates/mail/passwordResetEmail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/config/WebConfigurerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/config/WebConfigurerTestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/config/timezone/HibernateTimeZoneTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/repository/CustomAuditEventRepositoryIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/repository/timezone/DateTimeWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/repository/timezone/DateTimeWrapperRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/security/DomainUserDetailsServiceIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/security/SecurityUtilsUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/security/jwt/JWTFilterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/security/jwt/TokenProviderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/service/MailServiceIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/service/UserServiceIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/service/mapper/UserMapperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/AccountResourceIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/AuditResourceIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/LogsResourceIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/TestUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/UserJWTControllerIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/UserResourceIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/errors/ExceptionTranslatorIntTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/errors/ExceptionTranslatorTestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/frostyk/web/rest/util/PaginationUtilUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/resources/config/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/resources/i18n/messages_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/resources/templates/mail/testEmail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/AppNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/AppNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/LoginAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/LoginAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/auth/SignInScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/SignInScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/auth/SignUpScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/SignUpScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Buttons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Typography.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,10 +187,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/screens/EstablishmentsScreen.js">
+        <entry file="file://$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+            <state relative-caret-position="360">
+              <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -59,14 +202,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>REGISTERR</find>
-      <find>login</find>
-      <find>LOGIN</find>
-      <find>LinksScreen</find>
-      <find>LinksS</find>
-      <find>ProfileScreen</find>
-      <find>&lt;Text</find>
-      <find>largeTitle</find>
       <find>renderDescription</find>
       <find>listHeader</find>
       <find>prin</find>
@@ -82,13 +217,21 @@
       <find>fetchEstablishmentDetails</find>
       <find>TODO</find>
       <find>establishmentDetailsScreenState</find>
-      <find>console</find>
       <find>place_id</find>
       <find>changeEstablishmentScreenState</find>
       <find>changeEstablishmentDetailsScreenState</find>
       <find>EstablishmentDetailsScreen</find>
       <find>gree</find>
       <find>green</find>
+      <find>get</find>
+      <find>console</find>
+      <find>googleUser</find>
+      <find>result</find>
+      <find>defa</find>
+      <find>auth</find>
+      <find>console.log</find>
+      <find>getBasicProfile</find>
+      <find>onSignIn</find>
     </findStrings>
     <replaceStrings>
       <replace>PLACES</replace>
@@ -120,6 +263,7 @@
       <replace>FETCH</replace>
       <replace>TOURS</replace>
       <replace>fetchTours</replace>
+      <replace>let</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -133,7 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/redux/actions/EstablishmentScreenAction.js" />
         <option value="$PROJECT_DIR$/redux/reducers/FetchEstablishmentDetailsReducer.js" />
         <option value="$PROJECT_DIR$/redux/actions/FetchEstablishmentDetailsAction.js" />
         <option value="$PROJECT_DIR$/redux/actions/FetchPlacesAction.js" />
@@ -141,17 +284,14 @@
         <option value="$PROJECT_DIR$/redux/reducers/LogoutReducer.js" />
         <option value="$PROJECT_DIR$/screens/AuthLoadingScreen.js" />
         <option value="$PROJECT_DIR$/screens/SignInScreen.js" />
-        <option value="$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js" />
         <option value="$PROJECT_DIR$/styles/Input.js" />
         <option value="$PROJECT_DIR$/navigation/AuthStack.js" />
         <option value="$PROJECT_DIR$/redux/reducers/LoginReducer.js" />
         <option value="$PROJECT_DIR$/redux/reducers/RegisterReducer.js" />
-        <option value="$PROJECT_DIR$/redux/actions/LoginAction.js" />
         <option value="$PROJECT_DIR$/constants/Server.js" />
         <option value="$PROJECT_DIR$/screens/LinksScreen.js" />
         <option value="$PROJECT_DIR$/components/Divider.js" />
         <option value="$PROJECT_DIR$/components/List.js" />
-        <option value="$PROJECT_DIR$/navigation/AppNavigator.js" />
         <option value="$PROJECT_DIR$/screens/ProfileScreen.js" />
         <option value="$PROJECT_DIR$/screens/SettingsScreen.js" />
         <option value="$PROJECT_DIR$/styles/Inputs.js" />
@@ -166,7 +306,6 @@
         <option value="$PROJECT_DIR$/redux/reducers/ManageEstablishmentsStateReducer.js" />
         <option value="$PROJECT_DIR$/components/Autocomplete.js" />
         <option value="$PROJECT_DIR$/redux/actions/FetchCountriesAction.js" />
-        <option value="$PROJECT_DIR$/auth/auth.js" />
         <option value="$PROJECT_DIR$/redux/actions/RegisterAction.js" />
         <option value="$PROJECT_DIR$/redux/actions/FetchToursAction.js" />
         <option value="$PROJECT_DIR$/screens/EstablishmentDetailsScreen.js" />
@@ -175,15 +314,20 @@
         <option value="$PROJECT_DIR$/redux/reducers/ChangeEstablishmentDetailsScreenStateReducer.js" />
         <option value="$PROJECT_DIR$/constants/Google.js" />
         <option value="$PROJECT_DIR$/navigation/MainTabNavigator.js" />
-        <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
         <option value="$PROJECT_DIR$/styles/Typography.js" />
         <option value="$PROJECT_DIR$/styles/Buttons.js" />
         <option value="$PROJECT_DIR$/screens/CreateScreen.js" />
         <option value="$PROJECT_DIR$/screens/auth/WelcomeScreen.js" />
         <option value="$PROJECT_DIR$/screens/auth/SignUpScreen.js" />
-        <option value="$PROJECT_DIR$/screens/auth/SignInScreen.js" />
         <option value="$PROJECT_DIR$/screens/TourDetailsScreen.js" />
         <option value="$PROJECT_DIR$/screens/EstablishmentsScreen.js" />
+        <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
+        <option value="$PROJECT_DIR$/config/config.js" />
+        <option value="$PROJECT_DIR$/navigation/AppNavigator.js" />
+        <option value="$PROJECT_DIR$/redux/actions/LoginAction.js" />
+        <option value="$PROJECT_DIR$/screens/auth/SignInScreen.js" />
+        <option value="$PROJECT_DIR$/auth/auth.js" />
+        <option value="$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js" />
       </list>
     </option>
   </component>
@@ -214,16 +358,6 @@
             <path>
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
               <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
               <item name="navigation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -236,13 +370,6 @@
               <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
               <item name="redux" type="462c0819:PsiDirectoryNode" />
               <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-              <item name="types" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
@@ -261,11 +388,6 @@
               <item name="screens" type="462c0819:PsiDirectoryNode" />
               <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="easy-trip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-trip" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -276,7 +398,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554321898327" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557488164900" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -336,7 +458,9 @@
       <workItem from="1554807531605" duration="2778000" />
       <workItem from="1555349170529" duration="3576000" />
       <workItem from="1556020262727" duration="286000" />
-      <workItem from="1557227271171" duration="5776000" />
+      <workItem from="1557227271171" duration="6917000" />
+      <workItem from="1557483695330" duration="1427000" />
+      <workItem from="1557756297563" duration="8220000" />
     </task>
     <task id="LOCAL-00001" summary="Added Authentication flow">
       <created>1552303927871</created>
@@ -436,17 +560,24 @@
       <option name="project" value="LOCAL" />
       <updated>1557295806718</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added tour details">
+      <created>1557302149606</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1557302149606</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66910000" />
+    <option name="totallyTimeSpent" value="77698000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="954" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="960" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31562883" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32295483" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -461,7 +592,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3259861" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3248848" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -546,44 +677,10 @@
     <MESSAGE value="Finished second part of the Create Screen" />
     <MESSAGE value="Added tours showing" />
     <MESSAGE value="Updated search bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated search bar" />
+    <MESSAGE value="Added tour details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tour details" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/redux/reducers/GeocodeAddressReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/com/frostyk/repository/UserRepository.class" />
-    <entry file="file://$PROJECT_DIR$/../../Java/myn/src/main/java/com/myn/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="55" column="129" selection-start-line="55" selection-start-column="92" selection-end-line="55" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/TabBarIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/ProfileScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="67" column="6" lean-forward="true" selection-start-line="67" selection-start-column="6" selection-end-line="72" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redux/reducers/ChangeHomeScreenStateReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -618,16 +715,6 @@
           <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/LoginAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="31" selection-start-line="31" selection-end-line="32" />
-          <folding>
-            <element signature="e#0#87#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -755,16 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redux/actions/RegisterAction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -820,25 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/AppNavigator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/navigation/AuthStack.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -863,16 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="160" column="53" selection-start-line="160" selection-start-column="53" selection-end-line="160" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="185" column="35" lean-forward="true" selection-start-line="185" selection-start-column="35" selection-end-line="185" selection-end-column="35" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -943,10 +991,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/auth/SignInScreen.js">
+    <entry file="file://$PROJECT_DIR$/screens/EstablishmentsScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="50" column="115" selection-start-line="50" selection-start-column="115" selection-end-line="50" selection-end-column="115" />
+        <state relative-caret-position="405">
+          <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -955,18 +1003,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/TourDetailsScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        <state relative-caret-position="117">
+          <caret line="63" column="47" lean-forward="true" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/EstablishmentsScreen.js">
+    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+        <state relative-caret-position="530">
+          <caret line="192" column="73" selection-start-line="192" selection-start-column="73" selection-end-line="192" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/AppNavigator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/reducers/LoginReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/reducers/LogoutReducer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/LoginAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/auth/SignInScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="94" column="25" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/auth/AuthLoadingScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
