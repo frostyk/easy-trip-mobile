@@ -63,6 +63,9 @@ export const FETCH_TOURS_FAILURE = 'FETCH_TOURS_FAILURE';
 //Change Home Screen state
 export const CHANGE_HOME_SCREEN_STATE = 'CHANGE_HOME_SCREEN_STATE';
 
+//Change Profile Screen state
+export const CHANGE_PROFILE_SCREEN_STATE = 'CHANGE_PROFILE_SCREEN_STATE';
+
 //Change Establishment Screen state
 export const CHANGE_ESTABLISHMENT_SCREEN_STATE = 'CHANGE_ESTABLISHMENT_SCREEN_STATE';
 

@@ -18,13 +18,28 @@ class ProfileScreen extends React.Component {
         firebase.auth().signOut();
     }
 
+    getUserInfo = async () => {
+        this.props.changeProfileScreenState({user: firebase.auth().currentUser})
+    }
+
+
+    async componentDidMount () {
+       await this.getUserInfo();
+    }
+
     render() {
         return (
             <ScrollView style={styles.scrollContainer}>
                 <View style={styles.header}>
-                    <Avatar containerStyle={styles.avatar} rounded title="MD" size={'large'} />
-                    <Text style={[Typography.title2, styles.name]}>Rostyk Lytvyn</Text>
-                    <Text style={[Typography.headline, styles.quote]}>The wisest mind has something yet to learn.</Text>
+                    <Avatar
+                        rounded
+                        size={'large'}
+                        source={{
+                            uri: this.props.state.user.photoURL,
+                        }}
+                    />
+                    <Text style={[Typography.title2, styles.name]}>{this.props.state.user.displayName}</Text>
+                    <Text style={[Typography.headline, styles.quote]}>{this.props.state.user.email}</Text>
                 </View>
                 <Button
                     title={'Logout'}
@@ -38,7 +53,8 @@ class ProfileScreen extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        logoutState: state.logoutState
+        logoutState: state.logoutState,
+        state: state.profileScreenState,
     };
 };
 

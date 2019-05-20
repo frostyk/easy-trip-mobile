@@ -48,7 +48,8 @@ class SignInScreen extends React.Component {
                                 locale: result.additionalUserInfo.profile.locale,
                                 first_name: result.additionalUserInfo.profile.given_name,
                                 family_name: result.additionalUserInfo.profile.family_name,
-                                created_at: Date.now()
+                                created_at: Date.now(),
+                                access_token: googleUser.accessToken
                             }).then((snapshot) => {
                             this.props.googleLogin()
                         }).catch(err => {
@@ -59,8 +60,9 @@ class SignInScreen extends React.Component {
                             .database()
                             .ref(`/users/${result.user.uid}`)
                             .update({
-                                last_logged_in: Date.now()
-                            })
+                                last_logged_in: Date.now(),
+                                access_token: googleUser.accessToken
+                    })
                     }
 
 

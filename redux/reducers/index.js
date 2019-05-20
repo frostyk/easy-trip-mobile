@@ -14,6 +14,7 @@ import {registerReducer} from "./RegisterReducer";
 import {changeCreateScreenReducer} from "./ChangeCreateScreenStateReducer";
 import {createTourReducer} from "./CreateTourReducer";
 import {fetchToursReducer} from "./FetchToursReducer";
+import {changeProfileScreenReducer} from "./ChangeProfileScreenStateReducer";
 
 export default combineReducers({
     countries: fetchCountriesReducer,
@@ -30,5 +31,6 @@ export default combineReducers({
     registerState: registerReducer,
     createScreenState: changeCreateScreenReducer,
     createTourState: createTourReducer,
-    fetchTours: fetchToursReducer
+    fetchTours: fetchToursReducer,
+    profileScreenState: changeProfileScreenReducer,
 });
