@@ -23,12 +23,12 @@ class EstablishmentsScreen extends React.Component {
             <PlacesList
                 data={establishments}
                 onClick={item => this.viewDetails(item)}
+                addToFavourite={item => this.props.addToFavourite(item)}
             />
         );
     }
 
     viewDetails = (item) => {
-        alert('click');
         if (item.type === ESTABLISHMENT) {
             this.props.fetchEstablishmentDetails(item.place_id);
             this.props.navigation.navigate('EstablishmentDetails');

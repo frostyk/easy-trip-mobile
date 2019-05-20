@@ -1,26 +1,30 @@
 import React from 'react';
-import {FlatList, StyleSheet} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import {iOSColors} from "react-native-typography";
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
 import PropTypes from "prop-types";
-import {Card, Tile} from "react-native-elements";
+import {Card, Icon, Tile} from "react-native-elements";
 
 export class PlacesList extends React.Component {
 
     renderItem = (item) => {
         return (
             <Card id={item.id}>
-                <Tile
-                    id={item.id}
-                    imageSrc={{uri: item.img}}
-                    title={item.name}
-                    featured
-                    onPress={() => this.props.onClick(item)}
-                    caption={item.vicinity}
-                    width={widthPercentageToDP('85%')}
-                    height={heightPercentageToDP('25%')}
-                >
-                </Tile>
+                <View>
+                    <Tile
+                        id={item.id}
+                        imageSrc={{uri: item.img}}
+                        title={item.name}
+                        featured
+                        onPress={() => this.props.onClick(item)}
+                        caption={item.vicinity}
+                        width={widthPercentageToDP('85%')}
+                        height={heightPercentageToDP('25%')}
+                    >
+                    </Tile>
+                    <Icon onPress={() => this.props.addToFavourite(item)}  iconStyle={{position: 'absolute', bottom: 15, right: 10}} color={'#fff'} size={30} type='material-community' name='heart-outline'/>
+                    {/*<Icon color={iOSColors.white} onPress={this.props.removeFavourite}   iconStyle={{position: 'absolute', bottom: 15, right: 10}} size={30} type='material-community' name='heart'/>*/}
+                </View>
             </Card>
         )
     }
@@ -51,5 +55,6 @@ const styles = StyleSheet.create({
 
 PlacesList.propTypes = {
     data: PropTypes.arrayOf(PropTypes.object),
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    addToFavourite: PropTypes.func
 }
