@@ -49,17 +49,24 @@ const THEATRES = [
     {
         img: 'https://dummyimage.com/600x400/000/fff&text=Theater+1',
         name: 'Theater 1',
-        vicinity: 'Vcinity'
+        vicinity: 'Vcinity',
+        rating: 2,
+        price_level: 2
     },
     {
         img: 'https://dummyimage.com/600x400/000/fff&text=Theater+2',
         name: 'Theater 2',
-        vicinity: 'Vcinity'
+        vicinity: 'Vcinity',
+        rating: 4,
+        price_level: 3
     },
     {
         img: 'https://dummyimage.com/600x400/000/fff&text=Theater+3',
         name: 'Theater 3',
-        vicinity: 'Vcinity'
+        vicinity: 'Vcinity',
+        rating: 3,
+        price_level: 1
+
     },
 ];
 const MUSEUMS = [
@@ -125,12 +132,16 @@ class HomeScreen extends React.Component {
     }
 
     parseEstablishments = (establishments) => {
+        console.log(establishments);
         return establishments.map(item => {
             return {
+                id: item.id,
                 img: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`,
                 name: item.name,
                 place_id: item.place_id,
                 vicinity: item.vicinity,
+                price_level: item.price_level,
+                rating: item.rating,
                 type: ESTABLISHMENT
             }
         });
@@ -139,6 +150,7 @@ class HomeScreen extends React.Component {
     mapTours = (establishments) => {
         return establishments.map(item => {
             return {
+                id: item.id,
                 img: item.images[0],
                 name: item.title,
                 vicinity: item.placeId,

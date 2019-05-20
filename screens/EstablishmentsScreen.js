@@ -1,9 +1,9 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
-import {Button, Card, Icon} from "react-native-elements";
 import {ESTABLISHMENT} from "../constants/Google";
+import {PlacesList} from "../components/PlacesList";
 
 class EstablishmentsScreen extends React.Component {
     static navigationOptions = ({navigation}) => {
@@ -20,26 +20,15 @@ class EstablishmentsScreen extends React.Component {
         }
         const {establishments} = this.props.state;
         return (
-            <ScrollView>
-                {
-                    establishments.map((item, index) => (
-                        <Card
-                            key={index}
-                            image={{uri: item.img}}>
-                            <Button
-                                icon={<Icon name='code' color='#ffffff'/>}
-                                backgroundColor='#03A9F4'
-                                buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                                onPress={() => this.viewDetails(item)}
-                                title='View Details'/>
-                        </Card>
-                    ))
-                }
-            </ScrollView>
+            <PlacesList
+                data={establishments}
+                onClick={item => this.viewDetails(item)}
+            />
         );
     }
 
     viewDetails = (item) => {
+        alert('click');
         if (item.type === ESTABLISHMENT) {
             this.props.fetchEstablishmentDetails(item.place_id);
             this.props.navigation.navigate('EstablishmentDetails');

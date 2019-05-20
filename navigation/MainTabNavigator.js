@@ -9,6 +9,7 @@ import SettingsScreen from '../screens/CreateScreen';
 import EstablishmentsScreen from "../screens/EstablishmentsScreen";
 import EstablishmentDetailsScreen from '../screens/EstablishmentDetailsScreen'
 import TourDetailsScreen from "../screens/TourDetailsScreen";
+import FavouriteScreen from "../screens/FavouriteScreen";
 
 
 const HomeStack = createStackNavigator({
@@ -46,6 +47,20 @@ ProfileStack.navigationOptions = {
   ),
 };
 
+const FavouriteStack = createStackNavigator({
+  Favourite: FavouriteScreen,
+});
+
+FavouriteStack.navigationOptions = {
+  tabBarLabel: 'Favourites',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'ios-heart' : 'md-heart'}
+    />
+  ),
+};
+
 const PostStack = createStackNavigator({
   Settings: SettingsScreen,
 });
@@ -63,5 +78,6 @@ PostStack.navigationOptions = {
 export default createBottomTabNavigator({
   HomeStack,
   PostStack,
+  FavouriteStack,
   ProfileStack
 });
