@@ -27,7 +27,7 @@ const add = async (place) => {
     return firebase
         .database()
         .ref(`/favourites/${id}`)
-        .set({...place, uid: firebase.auth().currentUser.uid})
+        .set({...place, uid: firebase.auth().currentUser.uid, isSelected: true})
 };
 
 

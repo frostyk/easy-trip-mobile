@@ -16,6 +16,7 @@ import {createTourReducer} from "./CreateTourReducer";
 import {fetchToursReducer} from "./FetchToursReducer";
 import {changeProfileScreenReducer} from "./ChangeProfileScreenStateReducer";
 import {addToFavouriteReducer} from "./AddToFavouriteReducer";
+import {fetchFavouritesReducer} from "./FetchFavouritesReducer";
 
 export default combineReducers({
     countries: fetchCountriesReducer,
@@ -34,5 +35,6 @@ export default combineReducers({
     createTourState: createTourReducer,
     fetchTours: fetchToursReducer,
     profileScreenState: changeProfileScreenReducer,
-    addToFavourite: addToFavouriteReducer
+    addToFavourite: addToFavouriteReducer,
+    fetchFavouritesState: fetchFavouritesReducer,
 });

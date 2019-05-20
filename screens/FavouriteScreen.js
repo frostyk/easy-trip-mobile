@@ -8,26 +8,30 @@ import {SectionDivider} from "../components/Divider";
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 import firebase from 'firebase'
+import {PlacesList} from "../components/PlacesList";
 
 class FavouriteScreen extends React.Component {
     static navigationOptions = {
         title: 'Favourites',
     };
 
+    componentDidMount() {
+        this.props.fetchFavourites();
+    }
+
 
     render() {
-        return (
-            <ScrollView style={styles.scrollContainer}>
-                <Text>Favourites</Text>
-            </ScrollView>
-        );
+        return  (
+            <PlacesList  data={this.props.state.list}/>
+        )
     }
 }
 
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        state: state.profileScreenState,
+        state: state.fetchFavouritesState,
+
     };
 };
 

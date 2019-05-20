@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58b6431e-fc73-4d97-bd26-14c19e5c3cf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/redux/actions/AddToFavouriteAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/reducers/AddToFavouriteReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/actions/FetchFavouritesAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/reducers/FetchFavouritesReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/PlacesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/PlacesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/AddToFavouriteAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/AddToFavouriteAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redux/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redux/actions/types/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/types/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/EstablishmentsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/EstablishmentsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/FavouriteScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/FavouriteScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,12 +35,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/redux/actions/AddToFavouriteAction.js">
+        <entry file="file://$PROJECT_DIR$/components/PlacesList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="255">
+              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
               <folding>
-                <element signature="e#0#107#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,8 +50,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>prin</find>
-      <find>shadowRa</find>
       <find>widthP</find>
       <find>geocodeAddressByPlaceId</find>
       <find>logout</find>
@@ -79,10 +78,10 @@
       <find>fetch</find>
       <find>CREATE_TOUR</find>
       <find>createTour</find>
+      <find>ADD_TO_FAVOURITE</find>
+      <find>addToFavourite</find>
     </findStrings>
     <replaceStrings>
-      <replace>Places</replace>
-      <replace>GEOCODE_ADDRESS</replace>
       <replace>geocodeAddress</replace>
       <replace>Establishments</replace>
       <replace>ESTABLISHMENTS</replace>
@@ -111,6 +110,8 @@
       <replace>let</replace>
       <replace>ADD_TO_FAVOURITE</replace>
       <replace>addToFavourite</replace>
+      <replace>FETCH_FAVOURITES</replace>
+      <replace>fetchFavourites</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -124,8 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/screens/SignInScreen.js" />
-        <option value="$PROJECT_DIR$/styles/Input.js" />
         <option value="$PROJECT_DIR$/navigation/AuthStack.js" />
         <option value="$PROJECT_DIR$/redux/reducers/LoginReducer.js" />
         <option value="$PROJECT_DIR$/redux/reducers/RegisterReducer.js" />
@@ -165,16 +164,18 @@
         <option value="$PROJECT_DIR$/redux/actions/ProfileScreenAction.js" />
         <option value="$PROJECT_DIR$/redux/reducers/ChangeProfileScreenStateReducer.js" />
         <option value="$PROJECT_DIR$/screens/ProfileScreen.js" />
-        <option value="$PROJECT_DIR$/screens/FavouriteScreen.js" />
         <option value="$PROJECT_DIR$/navigation/MainTabNavigator.js" />
         <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/AddToFavouriteReducer.js" />
+        <option value="$PROJECT_DIR$/screens/EstablishmentsScreen.js" />
         <option value="$PROJECT_DIR$/redux/actions/types/types.js" />
         <option value="$PROJECT_DIR$/redux/actions/index.js" />
-        <option value="$PROJECT_DIR$/redux/reducers/AddToFavouriteReducer.js" />
         <option value="$PROJECT_DIR$/redux/reducers/index.js" />
-        <option value="$PROJECT_DIR$/components/PlacesList.js" />
-        <option value="$PROJECT_DIR$/screens/EstablishmentsScreen.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/FetchFavouritesReducer.js" />
+        <option value="$PROJECT_DIR$/screens/FavouriteScreen.js" />
+        <option value="$PROJECT_DIR$/redux/actions/FetchFavouritesAction.js" />
         <option value="$PROJECT_DIR$/redux/actions/AddToFavouriteAction.js" />
+        <option value="$PROJECT_DIR$/components/PlacesList.js" />
       </list>
     </option>
   </component>
@@ -252,7 +253,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558366850432" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558370781188" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -315,7 +316,7 @@
       <workItem from="1557227271171" duration="6917000" />
       <workItem from="1557483695330" duration="1427000" />
       <workItem from="1557756297563" duration="10929000" />
-      <workItem from="1558076647542" duration="7495000" />
+      <workItem from="1558076647542" duration="10863000" />
     </task>
     <task id="LOCAL-00001" summary="Added Authentication flow">
       <created>1552303927871</created>
@@ -450,11 +451,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558363688519</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Implement adding to favourites">
+      <created>1558367205082</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1558367205082</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87902000" />
+    <option name="totallyTimeSpent" value="91270000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="958" extended-state="6" />
@@ -565,19 +573,10 @@
     <MESSAGE value="Updated logout" />
     <MESSAGE value="Fixed Profile Screen" />
     <MESSAGE value="Fixed Places list and added Favourites tab" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Places list and added Favourites tab" />
+    <MESSAGE value="Implement adding to favourites" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement adding to favourites" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/redux/actions/ManageEstablishmentsAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="51" lean-forward="true" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/reducers/FetchPlacesReducer.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/redux/actions/FetchPlacesAction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-306">
@@ -593,16 +592,6 @@
           <caret line="71" column="32" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
           <folding>
             <element signature="e#0#104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/FetchEstablishmentsAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#119#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -791,9 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/HomeScreenAction.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/redux/reducers/ChangeProfileScreenStateReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -877,20 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/FavouriteScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/types/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redux/actions/CreateTourAction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -931,13 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redux/reducers/CreateTourReducer.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -948,29 +913,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/types/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/redux/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+        <state relative-caret-position="570">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/PlacesList.js">
+    <entry file="file://$PROJECT_DIR$/redux/reducers/FetchFavouritesReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="58" column="18" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="18" />
+        <state relative-caret-position="405">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/FavouriteScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/FetchFavouritesAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/AddToFavouriteAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="78" selection-start-line="29" selection-start-column="78" selection-end-line="29" selection-end-column="78" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/HomeScreenAction.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/FetchEstablishmentsAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#119#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/EstablishmentsScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
+        <state relative-caret-position="415">
           <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -978,12 +991,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/AddToFavouriteAction.js">
+    <entry file="file://$PROJECT_DIR$/components/PlacesList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="255">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
           <folding>
-            <element signature="e#0#107#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
