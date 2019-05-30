@@ -27,6 +27,8 @@ class FavouriteScreen extends React.Component {
     }
 
 
+
+
     render() {
         return (
             <PlacesList onClick={item => this.viewDetails(item)} deleteFavourite={id => this.props.deleteFavourite(id)} data={this.props.state.list}/>
@@ -38,7 +40,6 @@ class FavouriteScreen extends React.Component {
 const mapStateToProps = (state, ownProps) => {
     return {
         state: state.fetchFavouritesState,
-
     };
 };
 

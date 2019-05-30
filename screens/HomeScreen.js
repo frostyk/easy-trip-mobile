@@ -150,7 +150,7 @@ class HomeScreen extends React.Component {
         return establishments.map(item => {
             return {
                 id: item.id,
-                img: item.images[0].uri ,
+                images: item.images ,
                 name: item.title,
                 duration: item.duration,
                 price: item.price,
@@ -165,7 +165,7 @@ class HomeScreen extends React.Component {
         const {establishments} = this.props;
         const tours = this.mapTours(establishments.tours);
 
-    //    const restaurants = this.parseEstablishments(establishments.restaurants); //TODO uncomment for real data
+        const restaurants = this.parseEstablishments(establishments.restaurants); //TODO uncomment for real data
         const city = this.props.geocode.results.length > 0 ? this.props.geocode.results[0].formatted_address : 'City';
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
@@ -202,7 +202,7 @@ class HomeScreen extends React.Component {
                                       onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Tours', tours)}/>
                             </View>}
                             <Divider style={styles.divider}/>
-                            <List data={RESTAURANTS} title={'Best Restaurants'}
+                            <List data={restaurants} title={'Best Restaurants'}
                                   onIconClick={() => this.navigateToAndSetTitle('Establishments', 'Best Restaurants', restaurants)}/>
                             <Divider style={styles.divider}/>
                             <List data={THEATRES} title={'Best Theatres'}

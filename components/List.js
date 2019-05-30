@@ -26,7 +26,7 @@ export class List extends React.Component {
                             return (
                                 <View key={i} style={styles.listWrapper}>
                                     <Image
-                                        source={{uri: item.img}}
+                                        source={{uri: item.img ? item.img : item.images[0].uri}}
                                         style={styles.listImage}
                                     />
                                     <Text style={styles.listItem}>{item.name}</Text>

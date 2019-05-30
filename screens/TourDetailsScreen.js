@@ -1,12 +1,17 @@
 import React from 'react';
-import {ActivityIndicator, ScrollView, StyleSheet, Text, View, Linking} from 'react-native';
+import {ActivityIndicator, Linking, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 import {Button, Divider, Image, ListItem} from "react-native-elements";
-import {heightPercentageToDP, widthPercentageToDP, wp} from "react-native-responsive-screen";
+import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
 import Typography from "../styles/Typography";
 import Buttons from "../styles/Buttons";
 import {iOSColors} from "react-native-typography";
+import Carousel, {Pagination} from "react-native-snap-carousel";
+import SliderEntry from "../components/SliderEntry";
+
+const SLIDER_1_FIRST_ITEM = 1;
+
 
 class TourDetailsScreen extends React.Component {
     static navigationOptions = ({navigation}) => {
@@ -16,6 +21,75 @@ class TourDetailsScreen extends React.Component {
             title: 'Details'
         }
     };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            slider1ActiveSlide: 1
+        }
+
+    }
+
+
+    renderCarousel() {
+        const data = [];
+        const {tour} = this.props.state;
+        console.log(tour);
+
+        if (tour.images) {
+            tour.images.forEach(i => {
+                data.push({
+                    id: tour.placeId,
+                    illustration: i.uri
+                })
+            });
+        }
+        const {slider1ActiveSlide} = this.state;
+
+        return (
+            <View>
+                <Carousel
+                    ref={c => this._slider1Ref = c}
+                    data={data}
+                    renderItem={this._renderItemWithParallax}
+                    sliderWidth={widthPercentageToDP('100%')}
+                    itemWidth={widthPercentageToDP('80%')}
+                    hasParallaxImages={true}
+                    firstItem={SLIDER_1_FIRST_ITEM}
+                    inactiveSlideScale={0.94}
+                    inactiveSlideOpacity={0.7}
+                    containerCustomStyle={styles.slider}
+                    contentContainerCustomStyle={styles.sliderContentContainer}
+                    loop={true}
+                    loopClonesPerSide={2}
+                    onSnapToItem={(index) => this.setState({slider1ActiveSlide: index})}
+                />
+                <Pagination
+                    dotsLength={data.length}
+                    activeDotIndex={slider1ActiveSlide}
+                    containerStyle={styles.paginationContainer}
+                    dotColor={'rgba(100, 100, 100, 0.92)'}
+                    dotStyle={styles.paginationDot}
+                    inactiveDotColor={iOSColors.black}
+                    inactiveDotOpacity={0.4}
+                    inactiveDotScale={0.6}
+                    carouselRef={this._slider1Ref}
+                    tappableDots={!!this._slider1Ref}
+                />
+            </View>
+        );
+    }
+
+    _renderItemWithParallax = ({item, index}, parallaxProps) => {
+        return (
+            <SliderEntry
+                data={item}
+                even={(index + 1) % 2 === 0}
+                parallax={true}
+                parallaxProps={parallaxProps}
+            />
+        );
+    }
 
     updateIndex = (selectedIndex) => {
         this.props.changeEstablishmentDetailsScreenState({selectedIndex});
@@ -59,12 +133,10 @@ class TourDetailsScreen extends React.Component {
         return (
             <ScrollView>
                 <View style={styles.container}>
-                    <Text style={[styles.listHeader, {textAlign: 'left'} ]}> {tour.name}</Text>
-                    <Image
-                        source={{uri: tour.img}}
-                        style={{width: widthPercentageToDP('85%'), height: heightPercentageToDP('25%'), borderRadius: 20}}
-                        PlaceholderContent={<ActivityIndicator/>}
-                    />
+                    <Text style={[styles.listHeader, {textAlign: 'left'}]}> {tour.name}</Text>
+                    <View style={{height: heightPercentageToDP('35%')}}>
+                    {   this.renderCarousel()}
+                    </View>
                     <Button title={'Book now'} titleStyle={[Buttons.rounded.title, {color: iOSColors.white}]}
                             onPress={() => Linking.openURL(`tel:+${tour.tel}`)}
                             buttonStyle={[Buttons.rounded.solidStyle, {
@@ -72,10 +144,14 @@ class TourDetailsScreen extends React.Component {
                                 backgroundColor: iOSColors.pink,
                                 marginTop: 20
                             }]}/>
-                    <Text style={[Typography.subhead, {textAlign: 'center', marginTop: 20, lineHeight: 25}]}>{tour.description}</Text>
-                   <Text style={[Typography.headline, {textAlign: 'center', marginTop: 20}]}>
-                       About this activity
-                   </Text>
+                    <Text style={[Typography.subhead, {
+                        textAlign: 'center',
+                        marginTop: 20,
+                        lineHeight: 25
+                    }]}>{tour.description}</Text>
+                    <Text style={[Typography.headline, {textAlign: 'center', marginTop: 20}]}>
+                        About this activity
+                    </Text>
 
                     <View style={{alignSelf: 'flex-start', width: widthPercentageToDP('85%')}}>
                         {
@@ -83,7 +159,7 @@ class TourDetailsScreen extends React.Component {
                                 <ListItem
                                     key={i}
                                     title={item.title}
-                                    leftIcon={{ name: item.icon }}
+                                    leftIcon={{name: item.icon}}
                                 />
                             ))
                         }
@@ -107,7 +183,25 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         fontSize: 24,
         fontWeight: '600'
+    }
+    ,
+    sliderContentContainer: {
+        paddingVertical: 10 // for custom animation
     },
+    paginationContainer: {
+        paddingVertical: 10
+    },
+    paginationDot: {
+        width: 8,
+        height: 8,
+        borderRadius: 4,
+        marginHorizontal: 3
+    },
+
+    slider: {
+        overflow: 'visible' // for custom animations
+    },
+
 });
 
 const mapStateToProps = (state, ownProps) => {

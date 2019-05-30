@@ -14,6 +14,7 @@ class EstablishmentsScreen extends React.Component {
         }
     };
 
+
     render() {
         if (!this.props.state.establishments.length) {
             return null;

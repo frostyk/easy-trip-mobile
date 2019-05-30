@@ -17,7 +17,7 @@ export class PlacesList extends React.Component {
                 <View>
                     <Tile
                         id={item.id}
-                        imageSrc={{uri: item.img}}
+                        imageSrc={{uri: item.img ? item.img : item.images[0].uri}}
                         title={item.name}
                         featured
                         onPress={() => {
