@@ -8,7 +8,7 @@ import Typography from "../styles/Typography";
 import {widthPercentageToDP} from "react-native-responsive-screen";
 import {iOSColors} from "react-native-typography";
 import {List} from "../components/List";
-import {ESTABLISHMENT, GOOGLE_API_KEY, TOUR} from "../constants/Google";
+import {ESTABLISHMENT, GOOGLE_API_KEY, RESTAURANT, TOUR} from "../constants/Google";
 
 const Tours = [
     {
@@ -131,7 +131,7 @@ class HomeScreen extends React.Component {
         Linking.openURL(url);
     }
 
-    parseEstablishments = (establishments) => {
+    parseEstablishments = (establishments, type) => {
         return establishments.map(item => {
             return {
                 id: item.id,
@@ -141,6 +141,7 @@ class HomeScreen extends React.Component {
                 vicinity: item.vicinity,
                 price_level: item.price_level,
                 rating: item.rating,
+                establishmentType: type,
                 type: ESTABLISHMENT
             }
         });
@@ -165,7 +166,7 @@ class HomeScreen extends React.Component {
         const {establishments} = this.props;
         const tours = this.mapTours(establishments.tours);
 
-        const restaurants = this.parseEstablishments(establishments.restaurants); //TODO uncomment for real data
+        const restaurants = this.parseEstablishments(establishments.restaurants, RESTAURANT); //TODO uncomment for real data
         const city = this.props.geocode.results.length > 0 ? this.props.geocode.results[0].formatted_address : 'City';
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
