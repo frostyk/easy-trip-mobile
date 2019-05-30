@@ -7,8 +7,7 @@ import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive
 import Typography from "../styles/Typography";
 import Buttons from "../styles/Buttons";
 import {iOSColors} from "react-native-typography";
-import Carousel, {Pagination} from "react-native-snap-carousel";
-import SliderEntry from "../components/SliderEntry";
+import {ImageCarousel} from "../components/ImageCarousel";
 
 const SLIDER_1_FIRST_ITEM = 1;
 
@@ -24,17 +23,12 @@ class TourDetailsScreen extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            slider1ActiveSlide: 1
-        }
-
     }
 
 
     renderCarousel() {
         const data = [];
         const {tour} = this.props.state;
-        console.log(tour);
 
         if (tour.images) {
             tour.images.forEach(i => {
@@ -44,74 +38,11 @@ class TourDetailsScreen extends React.Component {
                 })
             });
         }
-        const {slider1ActiveSlide} = this.state;
 
-        return (
-            <View>
-                <Carousel
-                    ref={c => this._slider1Ref = c}
-                    data={data}
-                    renderItem={this._renderItemWithParallax}
-                    sliderWidth={widthPercentageToDP('100%')}
-                    itemWidth={widthPercentageToDP('80%')}
-                    hasParallaxImages={true}
-                    firstItem={SLIDER_1_FIRST_ITEM}
-                    inactiveSlideScale={0.94}
-                    inactiveSlideOpacity={0.7}
-                    containerCustomStyle={styles.slider}
-                    contentContainerCustomStyle={styles.sliderContentContainer}
-                    loop={true}
-                    loopClonesPerSide={2}
-                    onSnapToItem={(index) => this.setState({slider1ActiveSlide: index})}
-                />
-                <Pagination
-                    dotsLength={data.length}
-                    activeDotIndex={slider1ActiveSlide}
-                    containerStyle={styles.paginationContainer}
-                    dotColor={'rgba(100, 100, 100, 0.92)'}
-                    dotStyle={styles.paginationDot}
-                    inactiveDotColor={iOSColors.black}
-                    inactiveDotOpacity={0.4}
-                    inactiveDotScale={0.6}
-                    carouselRef={this._slider1Ref}
-                    tappableDots={!!this._slider1Ref}
-                />
-            </View>
-        );
+        return <ImageCarousel data={data}/>
     }
 
-    _renderItemWithParallax = ({item, index}, parallaxProps) => {
-        return (
-            <SliderEntry
-                data={item}
-                even={(index + 1) % 2 === 0}
-                parallax={true}
-                parallaxProps={parallaxProps}
-            />
-        );
-    }
 
-    updateIndex = (selectedIndex) => {
-        this.props.changeEstablishmentDetailsScreenState({selectedIndex});
-    };
-
-
-    renderDescription = (establishment) => {
-        return (
-            <View style={styles.descriptionDetails}>
-                <Divider style={styles.divider}/>
-                <View style={styles.descriptionDetailsItem}>
-                    <Text style={styles.descriptionItemHeader}>
-                        Address
-                    </Text>
-                    <Text style={styles.descriptionItemText}>
-                        {establishment.vicinity}
-                    </Text>
-                </View>
-                <Divider style={styles.divider}/>
-            </View>
-        )
-    };
 
 
     render() {
@@ -184,23 +115,6 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: '600'
     }
-    ,
-    sliderContentContainer: {
-        paddingVertical: 10 // for custom animation
-    },
-    paginationContainer: {
-        paddingVertical: 10
-    },
-    paginationDot: {
-        width: 8,
-        height: 8,
-        borderRadius: 4,
-        marginHorizontal: 3
-    },
-
-    slider: {
-        overflow: 'visible' // for custom animations
-    },
 
 });
 

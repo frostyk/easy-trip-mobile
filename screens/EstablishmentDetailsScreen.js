@@ -7,6 +7,7 @@ import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive
 import {GOOGLE_API_KEY} from "../constants/Google";
 import {MapView} from 'expo';
 import Typography from "../styles/Typography";
+import {ImageCarousel} from "../components/ImageCarousel";
 
 class EstablishmentDetailsScreen extends React.Component {
     static navigationOptions = ({navigation}) => {
@@ -33,6 +34,24 @@ class EstablishmentDetailsScreen extends React.Component {
             />
         )
     };
+
+
+    renderCarousel() {
+        const data = [];
+        const {tour} = this.props.state;
+
+        if (tour.images) {
+            tour.images.forEach(i => {
+                data.push({
+                    id: tour.placeId,
+                    illustration: i.uri
+                })
+            });
+        }
+
+        return <ImageCarousel data={data}/>
+    }
+
 
     renderDescription = (establishment) => {
         const list = [
@@ -124,13 +143,15 @@ class EstablishmentDetailsScreen extends React.Component {
             return null;
         }
         const {establishment} = this.props.state;
+        const images = establishment.photos.map ((photo, index) => {
+            return {
+                id: index,
+                illustration: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=${GOOGLE_API_KEY}`
+            }
+        });
         return (
             <ScrollView>
-                <Image
-                    source={{uri: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${establishment.photos[0].photo_reference}&key=${GOOGLE_API_KEY}`}}
-                    style={{width: widthPercentageToDP('100%'), height: heightPercentageToDP('30%')}}
-                    PlaceholderContent={<ActivityIndicator/>}
-                />
+                <ImageCarousel data={images}/>
                 {this.renderButtonsGroup()}
                 {this.props.state.selectedIndex === 0 && this.renderDescription(establishment)}
                 {this.props.state.selectedIndex === 1 && this.renderReviews(establishment)}
