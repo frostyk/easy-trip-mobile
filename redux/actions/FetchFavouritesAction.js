@@ -40,7 +40,7 @@ export const fetchFavourites = () => {
                 .on('value', function (snapshot) {
                     let places = [];
                     snapshot.forEach(function(childSnapshot) {
-                        places.push(childSnapshot.val());
+                        places.push({...childSnapshot.val(), id: childSnapshot.key});
                     });
                     dispatch(fetchFavouritesSuccess(places))
                 })

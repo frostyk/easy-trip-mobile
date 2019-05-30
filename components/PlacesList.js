@@ -33,7 +33,7 @@ export class PlacesList extends React.Component {
                     {!item.isSelected && <Icon onPress={() => {isSelected = !isSelected; this.props.addToFavourite(item);}}
                                           iconStyle={{position: 'absolute', bottom: 15, right: 10}} color={'#fff'}
                                           size={30} type='material-community' name='heart-outline'/>}
-                    {item.isSelected && <Icon color={iOSColors.white} onPress={() => {console.log('Log');item.isSelected = !item.isSelected}}
+                    {item.isSelected && <Icon color={iOSColors.white} onPress={() => {this.props.deleteFavourite(item.id); item.isSelected = !item.isSelected}}
                                          iconStyle={{position: 'absolute', bottom: 15, right: 10}} size={30}
                                          type='material-community' name='heart'/>}
                 </View>
@@ -68,5 +68,6 @@ const styles = StyleSheet.create({
 PlacesList.propTypes = {
     data: PropTypes.arrayOf(PropTypes.object),
     onClick: PropTypes.func,
-    addToFavourite: PropTypes.func
+    addToFavourite: PropTypes.func,
+    deleteFavourite: PropTypes.func
 }

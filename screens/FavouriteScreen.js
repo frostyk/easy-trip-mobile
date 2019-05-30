@@ -1,13 +1,9 @@
 import React from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
-import {Avatar, Button, Text} from "react-native-elements";
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from "react-native-responsive-screen";
-import Typography from '../styles/Typography';
+import {StyleSheet} from 'react-native';
+import {heightPercentageToDP as hp, widthPercentageToDP as wp} from "react-native-responsive-screen";
 import {iOSColors} from 'react-native-typography'
-import {SectionDivider} from "../components/Divider";
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
-import firebase from 'firebase'
 import {PlacesList} from "../components/PlacesList";
 
 class FavouriteScreen extends React.Component {
@@ -21,8 +17,8 @@ class FavouriteScreen extends React.Component {
 
 
     render() {
-        return  (
-            <PlacesList  data={this.props.state.list}/>
+        return (
+            <PlacesList deleteFavourite={id => this.props.deleteFavourite(id)} data={this.props.state.list}/>
         )
     }
 }
