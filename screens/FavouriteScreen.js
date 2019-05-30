@@ -5,6 +5,7 @@ import {iOSColors} from 'react-native-typography'
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 import {PlacesList} from "../components/PlacesList";
+import {ESTABLISHMENT} from "../constants/Google";
 
 class FavouriteScreen extends React.Component {
     static navigationOptions = {
@@ -15,10 +16,20 @@ class FavouriteScreen extends React.Component {
         this.props.fetchFavourites();
     }
 
+    viewDetails = (item) => {
+        if (item.type === ESTABLISHMENT) {
+            this.props.fetchEstablishmentDetails(item.place_id);
+            this.props.navigation.navigate('EstablishmentDetails');
+        } else {
+            this.props.changeEstablishmentDetailsScreenState({tour: item});
+            this.props.navigation.navigate('TourDetails');
+        }
+    }
+
 
     render() {
         return (
-            <PlacesList deleteFavourite={id => this.props.deleteFavourite(id)} data={this.props.state.list}/>
+            <PlacesList onClick={item => this.viewDetails(item)} deleteFavourite={id => this.props.deleteFavourite(id)} data={this.props.state.list}/>
         )
     }
 }

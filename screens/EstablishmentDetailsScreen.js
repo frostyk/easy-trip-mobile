@@ -6,6 +6,7 @@ import {AirbnbRating, ButtonGroup, Card, Divider, Image, ListItem} from "react-n
 import {heightPercentageToDP, widthPercentageToDP} from "react-native-responsive-screen";
 import {GOOGLE_API_KEY} from "../constants/Google";
 import {MapView} from 'expo';
+import Typography from "../styles/Typography";
 
 class EstablishmentDetailsScreen extends React.Component {
     static navigationOptions = ({navigation}) => {
@@ -34,18 +35,38 @@ class EstablishmentDetailsScreen extends React.Component {
     };
 
     renderDescription = (establishment) => {
+        const list = [
+            {
+                title: establishment.vicinity,
+                icon: 'room'
+            },
+            {
+                title: establishment.website,
+                icon: 'language'
+            },
+            {
+                title: establishment.international_phone_number,
+                icon: 'phone'
+            },
+            {
+                title: establishment.open_now ? 'Open now' : 'Close now',
+                icon: 'av-timer'
+            },
+        ]
         return (
             <View style={styles.descriptionDetails}>
-                <Divider style={styles.divider}/>
-                <View style={styles.descriptionDetailsItem}>
-                    <Text style={styles.descriptionItemHeader}>
-                        Address
-                    </Text>
-                    <Text style={styles.descriptionItemText}>
-                        {establishment.vicinity}
-                    </Text>
+                <Text style={[Typography.title,{ margin: 20}]}> {establishment.name}</Text>
+                <View style={{alignSelf: 'flex-start', width: widthPercentageToDP('85%')}}>
+                    {
+                        list.map((item, i) => (
+                            <ListItem
+                                key={i}
+                                title={item.title}
+                                leftIcon={{ name: item.icon }}
+                            />
+                        ))
+                    }
                 </View>
-                <Divider style={styles.divider}/>
             </View>
         )
     };
