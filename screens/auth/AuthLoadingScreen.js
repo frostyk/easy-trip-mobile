@@ -4,6 +4,8 @@ import {connect} from "react-redux";
 import * as actions from "../../redux/actions";
 import firebase from 'firebase'
 
+console.disableYellowBox = true;
+
 class AuthLoadingScreen extends React.Component {
     constructor(props) {
         super(props);

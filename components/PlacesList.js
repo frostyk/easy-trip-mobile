@@ -6,8 +6,6 @@ import PropTypes from "prop-types";
 import {Card, Icon, Tile} from "react-native-elements";
 
 export class PlacesList extends React.Component {
-
-
     renderItem = (item) => {
         let isSelected = false;
         if (item.isSelected) {
@@ -30,12 +28,18 @@ export class PlacesList extends React.Component {
                         height={heightPercentageToDP('25%')}
                     >
                     </Tile>
-                    {!item.isSelected && <Icon onPress={() => {isSelected = !isSelected; this.props.addToFavourite(item);}}
-                                          iconStyle={{position: 'absolute', bottom: 15, right: 10}} color={'#fff'}
-                                          size={30} type='material-community' name='heart-outline'/>}
-                    {item.isSelected && <Icon color={iOSColors.white} onPress={() => {this.props.deleteFavourite(item.id); item.isSelected = !item.isSelected}}
-                                         iconStyle={{position: 'absolute', bottom: 15, right: 10}} size={30}
-                                         type='material-community' name='heart'/>}
+                    {!item.isSelected && <Icon onPress={() => {
+                        isSelected = !isSelected;
+                        this.props.addToFavourite(item);
+                    }}
+                                               iconStyle={{position: 'absolute', bottom: 15, right: 10}} color={'#fff'}
+                                               size={30} type='material-community' name='heart-outline'/>}
+                    {item.isSelected && <Icon color={iOSColors.white} onPress={() => {
+                        this.props.deleteFavourite(item.id);
+                        item.isSelected = !item.isSelected
+                    }}
+                                              iconStyle={{position: 'absolute', bottom: 15, right: 10}} size={30}
+                                              type='material-community' name='heart'/>}
                 </View>
             </Card>
         )

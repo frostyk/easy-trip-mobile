@@ -3,6 +3,8 @@ import axios from "axios";
 import {SERVER_URL} from "../../constants/Server";
 import {addEstablishments} from "./ManageEstablishmentsAction";
 import {TOUR} from "../../constants/Google";
+import firebase from 'firebase'
+
 
 const fetchToursRequest = () => {
     return {
@@ -24,24 +26,29 @@ const fetchToursFailure = (err) => {
     }
 };
 
-const fetch = async (placeID) => {
-    return axios.get(`${SERVER_URL}/api/tour/${placeID}`);
-};
-
-
-export const fetchTours = (placeId) => {
+export const fetchTours = (place_id) => {
     return async (dispatch) => {
         dispatch(fetchToursRequest());
         try {
-            const res = await fetch(placeId);
-            dispatch(fetchToursSuccess(res.data.content));
-            dispatch(addEstablishments(res.data.content, TOUR));
+            return firebase
+                .database()
+                .ref(`/tours/`)
+                .orderByChild('placeId')
+                .equalTo(place_id)
+                .on('value', function (snapshot) {
+                    let tours = [];
+                    snapshot.forEach(function(childSnapshot) {
+                        tours.push(childSnapshot.val());
+                    });
+                    dispatch(fetchToursSuccess(tours))
+                    dispatch(addEstablishments(tours, TOUR));
+
+                })
         } catch (exception) {
-            console.log(exception);
+            console.log(exception)
             dispatch(fetchToursFailure())
         }
     }
 };
-
 
 

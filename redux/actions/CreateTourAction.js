@@ -1,6 +1,7 @@
 import {CREATE_TOUR_FAILURE, CREATE_TOUR_REQUEST, CREATE_TOUR_SUCCESS} from "./types/types";
 import axios from "axios";
 import {SERVER_URL} from "../../constants/Server";
+import firebase from 'firebase'
 
 const createTourRequest = () => {
     return {
@@ -23,19 +24,24 @@ const createTourFailure = (err) => {
 };
 
 const create = async (tour) => {
-    return axios.post(`${SERVER_URL}/api/tour`, tour);
+    return firebase
+        .database()
+        .ref(`/tours/`)
+        .push(tour)
 };
 
 
 
 export const createTour =  (tour) => {
+    console.log(tour);
     return async (dispatch) => {
         dispatch(createTourRequest());
         try {
-            const createdTour = await create(tour);
-            dispatch(createTourSuccess(createdTour))
+            await create(tour);
+            dispatch(createTourSuccess(tour))
         }
         catch(exception) {
+            console.log(exception)
             dispatch(createTourFailure())
         }
     }
