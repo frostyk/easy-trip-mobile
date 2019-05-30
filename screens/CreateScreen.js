@@ -60,8 +60,21 @@ class CreateScreen extends React.Component {
     };
 
     _createTour = () => {
-        const tour = _.pick(this.props.state, ['title', 'description', 'price', 'duration', 'placeId', 'images']);
+        const tour = _.pick(this.props.state, ['title', 'description', 'price', 'duration', 'placeId', 'images', 'tel']);
         this.props.createTour(tour);
+        this._changeState({
+            title: '',
+            description: '',
+            price: 0,
+            duration: 0,
+            placeId: '',
+            location: '',
+            images: [],
+            screenState: 1,
+            locationsListVisible: true,
+            coords: {lat: 49.83826, lng: 24.02324}
+        })
+        this.props.navigation.navigate('Home');
     };
 
     _changeState = (state) => {
@@ -133,6 +146,23 @@ class CreateScreen extends React.Component {
                                 <Icon
                                     type='font-awesome'
                                     name='dollar'
+                                    color={iOSColors.pink}
+                                    raised
+                                    size={14}
+                                />
+                            }
+                        />
+                        <Input
+                            inputContainerStyle={[Inputs.rounded.inputContainerStyle, {paddingLeft: 0}]}
+                            inputStyle={[Inputs.rounded.inputStyle]}
+                            placeholder={'Enter contact phone'}
+                            label={'Phone'}
+                            onChangeText={(tel) => this._changeState({tel})}
+                            labelStyle={Inputs.rounded.labelStyle}
+                            leftIcon={
+                                <Icon
+                                    type='font-awesome'
+                                    name='phone'
                                     color={iOSColors.pink}
                                     raised
                                     size={14}

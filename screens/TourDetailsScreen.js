@@ -1,5 +1,5 @@
 import React from 'react';
-import {ActivityIndicator, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ActivityIndicator, ScrollView, StyleSheet, Text, View, Linking} from 'react-native';
 import {connect} from "react-redux";
 import * as actions from "../redux/actions";
 import {Button, Divider, Image, ListItem} from "react-native-elements";
@@ -41,43 +41,38 @@ class TourDetailsScreen extends React.Component {
 
 
     render() {
+        const {tour} = this.props.state;
+
         if (!this.props.state.tour) {
             return null;
         }
         const list = [
             {
-                title: 'Duration 3 hourrs',
+                title: `Duration ${tour.duration} hours`,
                 icon: 'av-timer'
             },
             {
-                title: 'Trips',
-                icon: 'flight-takeoff'
-            },
-            {
-                title: 'Price 10$',
+                title: `Price ${tour.price}$`,
                 icon: 'attach-money'
             },
         ]
-        const {tour} = this.props.state;
         return (
             <ScrollView>
                 <View style={styles.container}>
-                    <Text style={[styles.listHeader, {textAlign: 'left'} ]}> Lviv: 3-Hour Romantic Tour with Food and  Coffee Tasting</Text>
+                    <Text style={[styles.listHeader, {textAlign: 'left'} ]}> {tour.name}</Text>
                     <Image
                         source={{uri: tour.img}}
                         style={{width: widthPercentageToDP('85%'), height: heightPercentageToDP('25%'), borderRadius: 20}}
                         PlaceholderContent={<ActivityIndicator/>}
                     />
                     <Button title={'Book now'} titleStyle={[Buttons.rounded.title, {color: iOSColors.white}]}
-                            onPress={() => this._createTour()}
+                            onPress={() => Linking.openURL(`tel:+${tour.tel}`)}
                             buttonStyle={[Buttons.rounded.solidStyle, {
                                 width: widthPercentageToDP('85%'),
                                 backgroundColor: iOSColors.pink,
                                 marginTop: 20
                             }]}/>
-                    <Text style={[Typography.subhead, {textAlign: 'center', marginTop: 20, lineHeight: 25}]}>
-                        Explore the romantic side of Lviv with the person you love. Hear the love stories of Lviv, see the old city streets, drink some coffee in a dark mine and enjoy romantic dishes.
-                    </Text>
+                    <Text style={[Typography.subhead, {textAlign: 'center', marginTop: 20, lineHeight: 25}]}>{tour.description}</Text>
                    <Text style={[Typography.headline, {textAlign: 'center', marginTop: 20}]}>
                        About this activity
                    </Text>

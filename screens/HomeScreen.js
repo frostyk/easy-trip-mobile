@@ -152,7 +152,10 @@ class HomeScreen extends React.Component {
                 id: item.id,
                 img: item.images[0].uri ,
                 name: item.title,
-                vicinity: item.placeId,
+                duration: item.duration,
+                price: item.price,
+                tel: item.tel,
+                description: item.description,
                 type: TOUR
             }
         });
