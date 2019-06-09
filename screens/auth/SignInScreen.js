@@ -113,8 +113,9 @@ class SignInScreen extends React.Component {
         return (
             <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
                 <View style={styles.container}>
+                    <Text style={[Typography.h1, {alignSelf: 'flex-start', padding: 20}]}>Sign In</Text>
+
                     <View style={styles.innerContainer}>
-                        <Text style={[Typography.h1, {alignSelf: 'flex-start'}]}>Sign In</Text>
                         <View style={styles.inputs}>
                             <SocialIcon
                                 title='Sign In With Google'
@@ -122,6 +123,15 @@ class SignInScreen extends React.Component {
                                 onPress={this.signInGoogle}
                                 style={{width: widthPercentageToDP('70%')}}
                                 type='google-plus-official' />
+                        </View>
+
+                        <View style={styles.inputs}>
+                            <SocialIcon
+                                title='Sign In With Facebook'
+                                button
+                                onPress={this.signInGoogle}
+                                style={{width: widthPercentageToDP('70%')}}
+                                type='facebook' />
                         </View>
                     </View>
                 </View>
@@ -154,14 +164,14 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     innerContainer: {
+        flex: 1,
         alignItems: 'center',
+        justifyContent: 'center',
         width: widthPercentageToDP('90%')
     },
     inputs: {
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
-        height: heightPercentageToDP('20%'),
-        marginTop: heightPercentageToDP('10%'),
         width: widthPercentageToDP('75%')
     }
 });

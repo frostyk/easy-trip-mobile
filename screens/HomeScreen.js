@@ -180,7 +180,7 @@ class HomeScreen extends React.Component {
                                 <Icon
                                     name='library-books'
                                     iconStyle={{padding: 10}}
-                                    color={iOSColors.blue}/>
+                                    color={'#6c00df'}/>
                                 <TouchableOpacity
                                     onPress={() => Linking.openURL(`https://www.google.com/search?q=${city}`)}>
                                     <Text style={styles.link}>About {city}</Text>
@@ -190,7 +190,7 @@ class HomeScreen extends React.Component {
                                 <Icon
                                     name='navigation'
                                     iconStyle={{padding: 10}}
-                                    color={iOSColors.blue}/>
+                                    color={'#6c00df'}/>
                                 <TouchableOpacity
                                     onPress={() => this.openMap()}>
                                     <Text style={styles.link}>Navigate</Text>
@@ -265,7 +265,7 @@ const styles = StyleSheet.create({
     },
     link: {
         ...Typography.headline,
-        color: iOSColors.blue,
+        color: '#6c00df',
         paddingVertical: 10,
     },
     divider: {

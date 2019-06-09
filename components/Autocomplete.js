@@ -18,7 +18,7 @@ class Autocomplete extends React.Component {
 
     onItemPress = item => {
         const establishmentsTypes = [RESTAURANT, MUSEUM, PARK, ZOO, NIGHT_CLUB, CAFE];
-        const testedTypes = [RESTAURANT]; //TODO chnage to all needed places
+        const testedTypes = [RESTAURANT, MUSEUM, NIGHT_CLUB]; //TODO chnage to all needed places
         this.props.cleanPlaces();
         testedTypes.forEach(type => {
             this.props.geocodeAddressByPlaceIdAndFindPlaces(item.place_id, type, 1500);
